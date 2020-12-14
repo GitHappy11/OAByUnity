@@ -1,0 +1,1177 @@
+fileFormatVersion: 2
+guid: bc7c8013e15cf70469397a8d8e110a87
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2419324209172185346
+    second: IG_CommonIcon_Splited.png.merge_0
+  - first:
+      213: -6194696067363057577
+    second: IG_CommonIcon_Splited.png.merge_1
+  - first:
+      213: 2062555335275661686
+    second: IG_CommonIcon_Splited.png.merge_2
+  - first:
+      213: -3837653668802416492
+    second: IG_CommonIcon_Splited.png.merge_3
+  - first:
+      213: 8283555961562724872
+    second: IG_CommonIcon_Splited.png.merge_4
+  - first:
+      213: -5698343636338005062
+    second: IG_CommonIcon_Splited.png.merge_5
+  - first:
+      213: -5996348931126183817
+    second: IG_CommonIcon_Splited.png.merge_6
+  - first:
+      213: 1718751305047424026
+    second: IG_CommonIcon_Splited.png.merge_7
+  - first:
+      213: -9017521955261931578
+    second: IG_CommonIcon_Splited.png.merge_8
+  - first:
+      213: -5247882792692584645
+    second: IG_CommonIcon_Splited.png.merge_9
+  - first:
+      213: -5777514980645708703
+    second: IG_CommonIcon_Splited.png.merge_10
+  - first:
+      213: 5798214314395384898
+    second: IG_CommonIcon_Splited.png.merge_11
+  - first:
+      213: 2392146211486406207
+    second: IG_CommonIcon_Splited.png.merge_12
+  - first:
+      213: -6569798984206319169
+    second: IG_CommonIcon_Splited.png.merge_13
+  - first:
+      213: -6972491299477988153
+    second: IG_CommonIcon_Splited.png.merge_14
+  - first:
+      213: -3811222321490275792
+    second: IG_CommonIcon_Splited.png.merge_15
+  - first:
+      213: -733520334198585816
+    second: IG_CommonIcon_Splited.png.merge_16
+  - first:
+      213: 3034374553520573352
+    second: IG_CommonIcon_Splited.png.merge_17
+  - first:
+      213: -7253200531262180092
+    second: IG_CommonIcon_Splited.png.merge_18
+  - first:
+      213: -1946091682193302944
+    second: IG_CommonIcon_Splited.png.merge_19
+  - first:
+      213: 1958200982209230554
+    second: IG_CommonIcon_Splited.png.merge_20
+  - first:
+      213: 1418031350873056019
+    second: IG_CommonIcon_Splited.png.merge_21
+  - first:
+      213: 5495335924283182803
+    second: IG_CommonIcon_Splited.png.merge_22
+  - first:
+      213: 3876667490281607867
+    second: IG_CommonIcon_Splited.png.merge_23
+  - first:
+      213: 8603412446019807362
+    second: IG_CommonIcon_Splited.png.merge_24
+  - first:
+      213: -8589276587814418190
+    second: IG_CommonIcon_Splited.png.merge_25
+  - first:
+      213: 4400091380044456330
+    second: IG_CommonIcon_Splited.png.merge_26
+  - first:
+      213: 2697377934197225508
+    second: IG_CommonIcon_Splited.png.merge_27
+  - first:
+      213: -8859636883190266095
+    second: bg
+  - first:
+      213: 4295307434953662416
+    second: IG_CommonIcon_Splited.png.merge_29
+  - first:
+      213: -2600406038812968614
+    second: IG_CommonIcon_Splited.png.merge_30
+  - first:
+      213: -8039588905240432340
+    second: IG_CommonIcon_Splited.png.merge_31
+  - first:
+      213: -7806588434282899260
+    second: IG_CommonIcon_Splited.png.merge_32
+  - first:
+      213: 1693320024415388981
+    second: touxiang
+  - first:
+      213: 7230604268427782794
+    second: IG_CommonIcon_Splited.png.merge_34
+  - first:
+      213: -5912284342337120333
+    second: Add
+  - first:
+      213: 2676421721950050525
+    second: IG_CommonIcon_Splited.png.merge_36
+  - first:
+      213: -4127392147420518498
+    second: IG_CommonIcon_Splited.png.merge_37
+  - first:
+      213: -5911687666052460817
+    second: IG_CommonIcon_Splited.png.merge_38
+  - first:
+      213: -6485068228303523634
+    second: IG_CommonIcon_Splited.png.merge_39
+  - first:
+      213: 4958277418363274241
+    second: IG_CommonIcon_Splited.png.merge_40
+  - first:
+      213: 800800709297544284
+    second: IG_CommonIcon_Splited.png.merge_41
+  - first:
+      213: 8158498589502125839
+    second: IG_CommonIcon_Splited.png.merge_42
+  - first:
+      213: 7512981181556853527
+    second: IG_CommonIcon_Splited.png.merge_43
+  - first:
+      213: -7927978991822554454
+    second: IG_CommonIcon_Splited.png.merge_44
+  - first:
+      213: 5658538403410501391
+    second: IG_CommonIcon_Splited.png.merge_45
+  - first:
+      213: 7782752047289558609
+    second: IG_CommonIcon_Splited.png.merge_46
+  - first:
+      213: -7767002845651504012
+    second: IG_CommonIcon_Splited.png.merge_47
+  - first:
+      213: 524156229975990445
+    second: IG_CommonIcon_Splited.png.merge_48
+  - first:
+      213: -1959424452770997804
+    second: IG_CommonIcon_Splited.png.merge_49
+  - first:
+      213: -3470562114890981821
+    second: IG_CommonIcon_Splited.png.merge_50
+  - first:
+      213: -1034146249869967771
+    second: IG_CommonIcon_Splited.png.merge_51
+  - first:
+      213: -7545653284839103516
+    second: IG_CommonIcon_Splited.png.merge_52
+  - first:
+      213: -8385060745588927645
+    second: IG_CommonIcon_Splited.png.merge_53
+  - first:
+      213: 8630278302101482775
+    second: IG_CommonIcon_Splited.png.merge_54
+  - first:
+      213: -845165600158223496
+    second: IG_CommonIcon_Splited.png.merge_55
+  - first:
+      213: 7806066019859706769
+    second: IG_CommonIcon_Splited.png.merge_56
+  - first:
+      213: 3718302822076029611
+    second: IG_CommonIcon_Splited.png.merge_57
+  - first:
+      213: -737799971666926829
+    second: bar1
+  - first:
+      213: 4681884066243807123
+    second: IG_CommonIcon_Splited.png.merge_59
+  - first:
+      213: -1048460884310214514
+    second: IG_CommonIcon_Splited.png.merge_60
+  - first:
+      213: -2771192791449524504
+    second: IG_CommonIcon_Splited.png.merge_61
+  - first:
+      213: 1085303469287026285
+    second: IG_CommonIcon_Splited.png.merge_62
+  - first:
+      213: 1418952495411449041
+    second: IG_CommonIcon_Splited.png.merge_63
+  - first:
+      213: -5937347336907049528
+    second: IG_CommonIcon_Splited.png.merge_64
+  - first:
+      213: 1583720793812052616
+    second: bar5
+  - first:
+      213: -1691143747003858003
+    second: IG_CommonIcon_Splited.png.merge_66
+  - first:
+      213: -8069076057386952540
+    second: IG_CommonIcon_Splited.png.merge_67
+  - first:
+      213: 1907510263306819533
+    second: IG_CommonIcon_Splited.png.merge_68
+  - first:
+      213: -3574505486975456553
+    second: IG_CommonIcon_Splited.png.merge_69
+  - first:
+      213: 4887979024164501888
+    second: bar4
+  - first:
+      213: -3596952222179232703
+    second: IG_CommonIcon_Splited.png.merge_71
+  - first:
+      213: 4732097373471007937
+    second: IG_CommonIcon_Splited.png.merge_72
+  - first:
+      213: -5589536037153990886
+    second: IG_CommonIcon_Splited.png.merge_73
+  - first:
+      213: -4039798836964429853
+    second: IG_CommonIcon_Splited.png.merge_74
+  - first:
+      213: 3565825420369607244
+    second: IG_CommonIcon_Splited.png.merge_75
+  - first:
+      213: 5388717558398894465
+    second: bar2
+  - first:
+      213: 1798231642290111160
+    second: IG_CommonIcon_Splited.png.merge_77
+  - first:
+      213: -8775635469511437734
+    second: bar3
+  - first:
+      213: -5285435523213819912
+    second: IG_CommonIcon_Splited.png.merge_79
+  - first:
+      213: 7384704634561965400
+    second: IG_CommonIcon_Splited.png.merge_80
+  - first:
+      213: -2637730988173081321
+    second: IG_CommonIcon_Splited.png.merge_81
+  - first:
+      213: 6606832682927317198
+    second: IG_CommonIcon_Splited.png.merge_82
+  - first:
+      213: -6536318256318807722
+    second: IG_CommonIcon_Splited.png.merge_83
+  - first:
+      213: -8202789954213121913
+    second: IG_CommonIcon_Splited.png.merge_84
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_19
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 532
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb192960fbf2134f8eb1c1757fd86a7
+      internalID: -1946091682193302944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 162
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8c6b15f65a65b4781f78734adde3f7
+      internalID: -8859636883190266095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: touxiang
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 451
+        width: 89
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea6bbabf98753439d45893ce0ec000
+      internalID: 1693320024415388981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_34
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 468
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96334e5a6933ef84a9cf010d33d597f1
+      internalID: 7230604268427782794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Add
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 474
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01f3d357fc729948a0d929d7f2c9972
+      internalID: -5912284342337120333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_48
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 440
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03651df6f13eed84cabb2f53d0acf6f5
+      internalID: 524156229975990445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_49
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 390
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa873c1bef1ff644383d980bd8ffdd43
+      internalID: -1959424452770997804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_50
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 396
+        width: 83
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cf458fb623fc94bbb3d730d1364027
+      internalID: -3470562114890981821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 362
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601f0b9e0bd70b549942bcda1dde2fae
+      internalID: -7545653284839103516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_53
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 312
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bdb0c0bafd35f48b1c1a2be9880e49
+      internalID: -8385060745588927645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_54
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 325
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23a8b3906a2ba14fb6cdde7bd26c4e8
+      internalID: 8630278302101482775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_55
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 324
+        width: 77
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d0a9c9080052042b386e9e7ec4f04a
+      internalID: -845165600158223496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_57
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 341
+        width: 78
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d65399d7bbef8942b579a4644d8b029
+      internalID: 3718302822076029611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82621ec370673cc4c97e24f65ec928cf
+      internalID: -737799971666926829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_59
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 324
+        width: 36
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9e5d06efbc4fb469888eb903a1ebaa
+      internalID: 4681884066243807123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_60
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 258
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d864ce3b8ccdd9d4ab92a811dee8abf0
+      internalID: -1048460884310214514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_61
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 296
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bb67e60a8749a449478418548620c9
+      internalID: -2771192791449524504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_62
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 284
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f751781aac96c4893d6e5eda111c53
+      internalID: 1085303469287026285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_63
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 284
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b193c399cf084144abfdcb75b9b8dec7
+      internalID: 1418952495411449041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_64
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 284
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333eb688f73e4d846bf460b6fd16552c
+      internalID: -5937347336907049528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar5
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 234
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62264ad9e84e6fb4499591ff1282414b
+      internalID: 1583720793812052616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_67
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 259
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a8a844f830acf44a89e09828ee8fc0
+      internalID: -8069076057386952540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 416
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d65525d91ca09a449a0c2d83727ca23
+      internalID: 1907510263306819533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_69
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 160
+        width: 103
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7545b3a2f51d54ea641df32c4ec291
+      internalID: -3574505486975456553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 156
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c11b2d74a91fc498a43dbc49bfaf9e
+      internalID: 4887979024164501888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_71
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 156
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23c2bfb8fb5f554b8c5d31864260a99
+      internalID: -3596952222179232703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e9028265b3f624892c3b7751f977e5
+      internalID: 4732097373471007937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_73
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 160
+        width: 81
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53302f2b649b474ebe886e5061ddf17
+      internalID: -5589536037153990886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_74
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 160
+        width: 109
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9637732991d173944bae5fddbb273626
+      internalID: -4039798836964429853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_75
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 160
+        width: 20
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe581444a8e30b042bfa04431e8c8702
+      internalID: 3565825420369607244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 82
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0579fd988b9214c95a3f9cd0cfb97a
+      internalID: 5388717558398894465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_77
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 82
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4830b4f20d1b8a842af0200fcd7c6786
+      internalID: 1798231642290111160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar3
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 78
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0911570161215924fb8e27f708606129
+      internalID: -8775635469511437734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_79
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 137
+        width: 36
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402cbacc868bb66488ed45c0f532a40e
+      internalID: -5285435523213819912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_80
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d9b2810e35d184cae560664365f35b
+      internalID: 7384704634561965400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_81
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 5
+        width: 386
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4efa2592af49b49b1545fedda8e9c7
+      internalID: -2637730988173081321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_82
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 0
+        width: 345
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a737d3a9ea877b041874bdfd78b0989d
+      internalID: 6606832682927317198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_83
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 72
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b7ce37f2d2ae4da7c0cf72782248d
+      internalID: -6536318256318807722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_CommonIcon_Splited.png.merge_84
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1
+        width: 53
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aace662fb193524c9ca228feae11b59
+      internalID: -8202789954213121913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
