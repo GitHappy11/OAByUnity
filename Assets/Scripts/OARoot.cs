@@ -35,6 +35,9 @@ public class OARoot : MonoBehaviour
         //业务模块初始化
         LoginSys loginSys = GetComponent<LoginSys>();
         loginSys.InitSys();
+
+        MainSys mainSys = GetComponent<MainSys>();
+        mainSys.InitSys();
     }
 
     public void AddTips(string tips)

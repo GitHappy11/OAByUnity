@@ -57,7 +57,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
     private void Update()
     {
-        peer.Service();
+        //peer.Service();
     }
 
 }

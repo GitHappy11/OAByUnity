@@ -7,7 +7,10 @@
 
 using UnityEngine;
 
-public class TaskBoxWnd : MonoBehaviour 
+public class TaskBoxWnd : WindowRoot 
 {
-
+    public void ClickReturnBtn()
+    {
+        SetWndState(false);
+    }
 }

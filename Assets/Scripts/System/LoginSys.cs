@@ -7,12 +7,13 @@
 
 using UnityEngine;
 
-public class LoginSys : SystemRoot 
+public class LoginSys : SystemRoot
 {
     public static LoginSys Instance = null;
 
     public LoginWnd loginWnd;
     public MainWnd mainWnd;
+    public NoticeWnd noticeWnd;
 
 
     public override void InitSys()
@@ -25,6 +26,12 @@ public class LoginSys : SystemRoot
     {
         loginWnd.SetWndState();
     }
+
+    public void EnterNotice()
+    {
+        noticeWnd.SetWndState();
+    }
+       
 
 
     public void RspLogin()

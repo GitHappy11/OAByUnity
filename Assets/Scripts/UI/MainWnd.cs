@@ -10,5 +10,27 @@ using UnityEngine.UI;
 
 public class MainWnd : WindowRoot 
 {
+    public void ClickWTDBtn()
+    {
+        MainSys.Instance.EnterWTD();
+    }
 
+    public void ClickHTBtn()
+    {
+        MainSys.Instance.EnterHT();
+    }
+
+    public void ClickKHBtn()
+    {
+        MainSys.Instance.EnterKH();
+    }
+
+    public void ClickJABtn()
+    {
+        MainSys.Instance.EnterJA();
+    }
+    public void ClickSearchBtn()
+    {
+        MainSys.Instance.EnterSearch();
+    }
 }

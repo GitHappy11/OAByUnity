@@ -55,6 +55,6 @@ public class LoginWnd : WindowRoot
 
     public void ClickNoticeBtn()
     {
-
+        LoginSys.Instance.EnterNotice();
     }
 }

@@ -35,7 +35,7 @@ public class WindowRoot : MonoBehaviour
 
     protected virtual void ClearWnd()
     {
-
+        
     }
 
 
