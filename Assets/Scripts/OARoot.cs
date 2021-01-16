@@ -1,5 +1,5 @@
 ﻿/****************************************************
-    文件：GameRoot.cs
+    文件：OARoot.cs
 	作者：Happy-11
     日期：2020年12月11日23:01:48
 	功能：系统主程序
@@ -12,6 +12,7 @@ public class OARoot : MonoBehaviour
 {
     public static OARoot Instance = null;
 
+    public DynamicWnd dynamicWnd;
     public TipsWnd tipsWnd;
 
     private void Awake()
@@ -19,6 +20,7 @@ public class OARoot : MonoBehaviour
         Instance = this;
 
         Init();
+        LoadSet();
     }
 
     private void Init()
@@ -40,8 +42,18 @@ public class OARoot : MonoBehaviour
         mainSys.InitSys();
     }
 
+    public void LoadSet()
+    {
+        AudioSvc.Instance.PlayBGMusic(Constants.audioBGByElectricRomeo);
+    }
+
     public void AddTips(string tips)
     {
-        Instance.tipsWnd.AddTips(tips);
+        tipsWnd.AddTips(tips);
+    }
+
+    public void AddDynTips(string tips ,string title= "提示")
+    {
+        dynamicWnd.AddDynTips(title, tips);
     }
 }

@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3381315035604636426
-    second: "\u4E3B\u9875\u56FE\u6807_0"
+    second: confirm
   - first:
       213: -1157446593915869482
     second: Search
@@ -16,7 +16,7 @@ TextureImporter:
     second: "\u4E3B\u9875\u56FE\u6807_3"
   - first:
       213: 5818625838565462764
-    second: "\u4E3B\u9875\u56FE\u6807_4"
+    second: delete
   - first:
       213: -2895867285798617975
     second: "\u4E3B\u9875\u56FE\u6807_5"
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u4E3B\u9875\u56FE\u6807_4"
+      name: delete
       rect:
         serializedVersion: 2
         x: 441
@@ -309,6 +309,27 @@ TextureImporter:
       bones: []
       spriteID: 8dc4dccdabde8b245ba862fb77200b02
       internalID: 7838221839822147663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: confirm
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 316
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ab734b5e4f4f040bbdeba8d0cb7c4e
+      internalID: -3381315035604636426
       vertices: []
       indices: 
       edges: []

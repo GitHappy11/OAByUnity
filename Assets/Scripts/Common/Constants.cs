@@ -9,8 +9,7 @@ using UnityEngine;
 
 public class Constants : MonoBehaviour 
 {
-    public void test()
-    {
 
-    }
+
+    public const string audioBGByElectricRomeo = "ElectricRomeo";
 }

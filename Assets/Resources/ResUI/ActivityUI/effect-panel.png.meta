@@ -1,7 +1,127 @@
 fileFormatVersion: 2
 guid: 814a13d2eaab0694e8de121d1e1bd944
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4076223614769206452
+    second: effect-panel_0
+  - first:
+      213: -3964925787859636791
+    second: effect-1
+  - first:
+      213: -8842363164565157916
+    second: effect-panel_2
+  - first:
+      213: 4473667657926039066
+    second: effect-panel_3
+  - first:
+      213: -1870958130115954708
+    second: effect-panel_4
+  - first:
+      213: 1705595706555344145
+    second: effect-panel_5
+  - first:
+      213: 3450889489400383939
+    second: effect-panel_6
+  - first:
+      213: -571426596878617909
+    second: effect-panel_7
+  - first:
+      213: 4908046384805988760
+    second: effect-panel_8
+  - first:
+      213: 7014635738153530518
+    second: effect-panel_9
+  - first:
+      213: -8583649301136848153
+    second: effect-panel_10
+  - first:
+      213: 3113561871759593212
+    second: effect-panel_11
+  - first:
+      213: 6235484909367495399
+    second: effect-panel_12
+  - first:
+      213: 6921933458307232211
+    second: effect-panel_13
+  - first:
+      213: 6943580783353382807
+    second: effect-panel_14
+  - first:
+      213: 2212553913118608361
+    second: effect-panel_15
+  - first:
+      213: 936546724364552514
+    second: effect-panel_16
+  - first:
+      213: -787883206419240303
+    second: effect-panel_17
+  - first:
+      213: 6325032210585183509
+    second: effect-panel_18
+  - first:
+      213: -115441570418987201
+    second: effect-panel_19
+  - first:
+      213: -4468021474108743516
+    second: effect-panel_20
+  - first:
+      213: -6953726262185533506
+    second: effect-panel_21
+  - first:
+      213: 734580084578350358
+    second: effect-panel_22
+  - first:
+      213: 6510812034638999038
+    second: effect-panel_23
+  - first:
+      213: 4079051266400083499
+    second: effect-panel_24
+  - first:
+      213: -7018294887527396742
+    second: effect-panel_25
+  - first:
+      213: 5521273814018405266
+    second: effect-panel_26
+  - first:
+      213: 7073252354706404558
+    second: effect-panel_27
+  - first:
+      213: 4279620306670227818
+    second: effect-panel_28
+  - first:
+      213: 7975701707081424033
+    second: effect-panel_29
+  - first:
+      213: -1372914667674399353
+    second: effect-panel_30
+  - first:
+      213: 8574491011264405248
+    second: effect-panel_31
+  - first:
+      213: 7313012252254373917
+    second: effect-panel_32
+  - first:
+      213: 8328217390973503743
+    second: effect-panel_33
+  - first:
+      213: -7909719582142047015
+    second: effect-panel_34
+  - first:
+      213: 1834678529937298937
+    second: effect-panel_35
+  - first:
+      213: -3681874587237297306
+    second: effect-panel_36
+  - first:
+      213: -3121128937990301778
+    second: effect-panel_37
+  - first:
+      213: -5661792558075856297
+    second: effect2
+  - first:
+      213: 6997818357257385250
+    second: effec3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +160,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +190,105 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: effect-panel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403
+        width: 580
+        height: 447
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b7feacd3d96c647afa92212e009928
+      internalID: -4076223614769206452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 325
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6fd550d1434d74391ae574bb17df35
+      internalID: -3964925787859636791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 7
+        width: 245
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b72208dd4ee2f40a6883098c3a8f59
+      internalID: -5661792558075856297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effec3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 126
+        width: 126
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e982e429e7dc7c345a98209aa082404c
+      internalID: 6997818357257385250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

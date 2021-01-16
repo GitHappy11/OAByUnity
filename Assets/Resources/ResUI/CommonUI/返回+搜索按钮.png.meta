@@ -169,7 +169,7 @@ TextureImporter:
     second: "\u8FD4\u56DE+_60"
   - first:
       213: -3750643012873498673
-    second: "\u8FD4\u56DE+_61"
+    second: Yes
   - first:
       213: 6705239912939570015
     second: "\u8FD4\u56DE+_64"
@@ -190,7 +190,7 @@ TextureImporter:
     second: "\u8FD4\u56DE+_69"
   - first:
       213: -3005694682350430491
-    second: "\u8FD4\u56DE+_70"
+    second: No
   - first:
       213: -1543931296542643912
     second: "\u8FD4\u56DE+_71"
@@ -214,7 +214,7 @@ TextureImporter:
     second: "\u8FD4\u56DE+_77"
   - first:
       213: -6991056831852629794
-    second: "\u8FD4\u56DE+_78"
+    second: Qizi
   - first:
       213: 2107152074315029151
     second: "\u8FD4\u56DE+_80"
@@ -358,22 +358,22 @@ TextureImporter:
     second: "\u8FD4\u56DE+_136"
   - first:
       213: -8007385467733980701
-    second: "\u8FD4\u56DE+_137"
+    second: rightRel1
   - first:
       213: 6638199688217281248
-    second: "\u8FD4\u56DE+_138"
+    second: rightRel2
   - first:
       213: -1850402941633633404
-    second: "\u8FD4\u56DE+_139"
+    second: rightRel3
   - first:
       213: -7590890418424395228
     second: "\u8FD4\u56DE+_140"
   - first:
       213: -4766561307714974677
-    second: "\u8FD4\u56DE+_141"
+    second: rightRel4
   - first:
       213: -7987050149242693971
-    second: t2
+    second: rightRel5
   - first:
       213: 2692104218604609212
     second: "\u8FD4\u56DE+_143"
@@ -400,7 +400,7 @@ TextureImporter:
     second: "\u8FD4\u56DE+_154"
   - first:
       213: 8499236189446793519
-    second: "\u8FD4\u56DE+_155"
+    second: embellish5
   - first:
       213: 7529799142982344783
     second: "\u8FD4\u56DE+_156"
@@ -433,10 +433,10 @@ TextureImporter:
     second: "\u8FD4\u56DE+_169"
   - first:
       213: -8473914996122587688
-    second: "\u8FD4\u56DE+_170"
+    second: NewPanel
   - first:
       213: -5677494833774695501
-    second: "\u8FD4\u56DE+_172"
+    second: Arrow3
   - first:
       213: 1695712138605271917
     second: "\u8FD4\u56DE+_173"
@@ -475,7 +475,7 @@ TextureImporter:
     second: "\u8FD4\u56DE+_184"
   - first:
       213: 4524330485505912886
-    second: "\u8FD4\u56DE+_185"
+    second: frame1
   - first:
       213: 4585145444817986030
     second: "\u8FD4\u56DE+_186"
@@ -538,22 +538,22 @@ TextureImporter:
     second: "\u8FD4\u56DE+_205"
   - first:
       213: -8233929535720629298
-    second: "\u8FD4\u56DE+_207"
+    second: frame2
   - first:
       213: -3952013059870124065
     second: "\u8FD4\u56DE+_208"
   - first:
       213: 4085770539592072590
-    second: "\u8FD4\u56DE+_209"
+    second: embellish2
   - first:
       213: -4947133788111387009
-    second: tt
+    second: embellish
   - first:
       213: -7619617091771674033
-    second: "\u8FD4\u56DE+_211"
+    second: embellish3
   - first:
       213: -8697749013620805020
-    second: "\u8FD4\u56DE+_212"
+    second: embellish4
   - first:
       213: 576512522765533288
     second: "\u8FD4\u56DE+_213"
@@ -830,13 +830,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_61"
+      name: Yes
       rect:
         serializedVersion: 2
-        x: 291
-        y: 830
-        width: 87
-        height: 50
+        x: 253
+        y: 760
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,13 +872,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_70"
+      name: No
       rect:
         serializedVersion: 2
-        x: 291
-        y: 781
-        width: 95
-        height: 48
+        x: 163
+        y: 993
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,7 +893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_78"
+      name: Qizi
       rect:
         serializedVersion: 2
         x: 291
@@ -1145,7 +1145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_137"
+      name: rightRel1
       rect:
         serializedVersion: 2
         x: 703
@@ -1166,7 +1166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_138"
+      name: rightRel2
       rect:
         serializedVersion: 2
         x: 752
@@ -1187,12 +1187,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_139"
+      name: rightRel3
       rect:
         serializedVersion: 2
         x: 802
         y: 594
-        width: 40
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1208,28 +1208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_140"
-      rect:
-        serializedVersion: 2
-        x: 837
-        y: 594
-        width: 11
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f2956f03c9878442980006f76ce05dc
-      internalID: -7590890418424395228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u8FD4\u56DE+_141"
+      name: rightRel4
       rect:
         serializedVersion: 2
         x: 851
@@ -1250,7 +1229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: t2
+      name: rightRel5
       rect:
         serializedVersion: 2
         x: 899
@@ -1313,13 +1292,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_155"
+      name: embellish5
       rect:
         serializedVersion: 2
-        x: 1001
-        y: 569
-        width: 19
-        height: 19
+        x: 959
+        y: 478
+        width: 62
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1460,13 +1439,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_170"
+      name: NewPanel
       rect:
         serializedVersion: 2
         x: 462
-        y: 477
-        width: 70
-        height: 53
+        y: 646
+        width: 59
+        height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1481,13 +1460,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_172"
+      name: Arrow3
       rect:
         serializedVersion: 2
-        x: 606
-        y: 505
-        width: 87
-        height: 24
+        x: 843
+        y: 621
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1649,10 +1628,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_185"
+      name: frame1
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 388
         width: 98
         height: 96
@@ -1943,7 +1922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_207"
+      name: frame2
       rect:
         serializedVersion: 2
         x: 192
@@ -1964,7 +1943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_209"
+      name: embellish2
       rect:
         serializedVersion: 2
         x: 450
@@ -1985,7 +1964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tt
+      name: embellish
       rect:
         serializedVersion: 2
         x: 582
@@ -2006,7 +1985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_211"
+      name: embellish3
       rect:
         serializedVersion: 2
         x: 714
@@ -2027,7 +2006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE+_212"
+      name: embellish4
       rect:
         serializedVersion: 2
         x: 846

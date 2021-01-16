@@ -12,6 +12,10 @@ public class LoginWnd : WindowRoot
 {
     public InputField iptAcct;
     public InputField iptPassword;
+    public GameObject notice;
+    public Animation anibtnBGMusic;
+
+    public bool isAutoLogin=true;
 
     protected override void InitWnd()
     {
@@ -40,9 +44,18 @@ public class LoginWnd : WindowRoot
             PlayerPrefs.SetString("Acct",acct);
             PlayerPrefs.SetString("Pass",password);
 
-            //发送网络消息 这里先假设 登录成功
+            if (LocalData.statusCode==ExitGames.Client.Photon.StatusCode.Connect)
+            {
+                //发送网络消息 这里先假设 登录成功
 
-            LoginSys.Instance.RspLogin();
+                LoginSys.Instance.RspLogin();
+            }
+            else
+            {
+                OARoot.Instance.AddDynTips("检测到当前服务端未响应！进入离线测试模式！", "网络警告");
+                LoginSys.Instance.RspLogin();
+            }
+            
 
         }
         else
@@ -53,8 +66,48 @@ public class LoginWnd : WindowRoot
         }
     }
 
+    public void ClickNextLoginConfirm(Image img)
+    {
+
+        if (img.color.a==255)
+        {
+            img.color = new Color(255, 255, 255, 0);
+            isAutoLogin = false;
+        }
+        else
+        {
+            img.color = new Color(255, 255, 255, 255);
+            isAutoLogin = true;
+        }
+    
+    
+             
+    }
+
     public void ClickNoticeBtn()
     {
-        LoginSys.Instance.EnterNotice();
+        notice.SetActive(true);
+    }
+
+    public void ClickCloseNoice()
+    {
+        notice.SetActive(false);
+    }
+    
+    public void ClickSetMusic(Image img)
+    {
+        if (AudioSvc.Instance.bgMusicMode==BGMusicMode.Play)
+        {
+            anibtnBGMusic.Stop();
+            img.sprite = Resources.Load<Sprite>(PathDefine.spriteStopMusic);
+            AudioSvc.Instance.SetBGAudio(BGMusicMode.Pause);
+        }
+        else
+        {
+            anibtnBGMusic.Play();
+            img.sprite = Resources.Load<Sprite>(PathDefine.spriteStartMusic);
+            AudioSvc.Instance.SetBGAudio(BGMusicMode.Play);
+        }
+        
     }
 }

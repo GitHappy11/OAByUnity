@@ -44,6 +44,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     //服务器状态改变的时候执行的方法
     public void OnStatusChanged(StatusCode statusCode)
     {
+        LocalData.statusCode = statusCode;
         Debug.Log(statusCode);
     }
     public void DebugReturn(DebugLevel level, string message)
@@ -57,7 +58,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
     private void Update()
     {
-        //peer.Service();
+        peer.Service();
     }
 
 }

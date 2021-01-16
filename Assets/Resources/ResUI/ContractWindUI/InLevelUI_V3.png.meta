@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: d925961b6095d904fb9e33738cc94ad3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8117732306677046638
+    second: InLevelUI_V3_0
+  - first:
+      213: 8564484949817516980
+    second: InLevelUI_V3_1
+  - first:
+      213: -5463699086320827884
+    second: Node
+  - first:
+      213: 1456899881728314079
+    second: InLevelUI_V3_3
+  - first:
+      213: -8810154462864100362
+    second: InLevelUI_V3_4
+  - first:
+      213: 6187210130065432136
+    second: InLevelUI_V3_5
+  - first:
+      213: 8244324437468066721
+    second: InLevelUI_V3_6
+  - first:
+      213: 5443978297823980072
+    second: InLevelUI_V3_7
+  - first:
+      213: 5754917857397321334
+    second: InLevelUI_V3_8
+  - first:
+      213: 8228787291662459575
+    second: InLevelUI_V3_9
+  - first:
+      213: 5913249577936141016
+    second: InLevelUI_V3_10
+  - first:
+      213: 4525008828992061529
+    second: InLevelUI_V3_11
+  - first:
+      213: 8807180833850079861
+    second: InLevelUI_V3_12
+  - first:
+      213: 3736865446935971737
+    second: InLevelUI_V3_13
+  - first:
+      213: -821777480343302565
+    second: InLevelUI_V3_14
+  - first:
+      213: 8093736601957020056
+    second: InLevelUI_V3_15
+  - first:
+      213: 4637171894589091569
+    second: InLevelUI_V3_16
+  - first:
+      213: 2485101706880474826
+    second: InLevelUI_V3_17
+  - first:
+      213: 6235026386446565765
+    second: InLevelUI_V3_18
+  - first:
+      213: 7432016269943140963
+    second: InLevelUI_V3_19
+  - first:
+      213: -6231137402798063744
+    second: InLevelUI_V3_20
+  - first:
+      213: -4465811683147322313
+    second: InLevelUI_V3_21
+  - first:
+      213: -2898586209639993929
+    second: InLevelUI_V3_22
+  - first:
+      213: -2740919325666147059
+    second: InLevelUI_V3_23
+  - first:
+      213: -4482854837009973133
+    second: InLevelUI_V3_24
+  - first:
+      213: -4330003265435699491
+    second: InLevelUI_V3_25
+  - first:
+      213: 2560736772388030808
+    second: InLevelUI_V3_26
+  - first:
+      213: -3052837881761771004
+    second: InLevelUI_V3_27
+  - first:
+      213: 988933254633038115
+    second: InLevelUI_V3_28
+  - first:
+      213: -3431725365476039383
+    second: InLevelUI_V3_29
+  - first:
+      213: -4342206651611277378
+    second: InLevelUI_V3_30
+  - first:
+      213: -4453593629043427092
+    second: InLevelUI_V3_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Node
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 382
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1103bf7ad62ec7f4cb7f44ad28f91698
+      internalID: -5463699086320827884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
