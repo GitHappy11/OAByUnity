@@ -36,6 +36,8 @@ public class LoginWnd : WindowRoot
 
     public void ClickLoginBtn()
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
+
         string acct = iptAcct.text;
         string password = iptPassword.text;
         if (acct!= ""&&password!="")
@@ -68,15 +70,16 @@ public class LoginWnd : WindowRoot
 
     public void ClickNextLoginConfirm(Image img)
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
 
-        if (img.color.a==255)
+        if (img.color.a==1)
         {
-            img.color = new Color(255, 255, 255, 0);
+            img.color = new Color(1, 1, 1, 0);
             isAutoLogin = false;
         }
         else
         {
-            img.color = new Color(255, 255, 255, 255);
+            img.color = new Color(1, 1, 1, 1);
             isAutoLogin = true;
         }
     
@@ -86,16 +89,19 @@ public class LoginWnd : WindowRoot
 
     public void ClickNoticeBtn()
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
         notice.SetActive(true);
     }
 
     public void ClickCloseNoice()
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
         notice.SetActive(false);
     }
     
     public void ClickSetMusic(Image img)
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
         if (AudioSvc.Instance.bgMusicMode==BGMusicMode.Play)
         {
             anibtnBGMusic.Stop();

@@ -42,7 +42,13 @@ public class AudioSvc : SystemRoot
             bgAudio.Play();
         }
     }
-    
+    public void PlayUIAudio(string name=Constants.audioUIByUIClickBtn)
+    {
+        AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/UI/" + name, true);
+        uiAudio.clip = audio;
+        uiAudio.Play();
+    }
+
     public void SetBGAudio(BGMusicMode bGMusicMode)
     {
         bgMusicMode = bGMusicMode;

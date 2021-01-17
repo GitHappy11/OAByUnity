@@ -27,25 +27,36 @@ public class MainSys : SystemRoot
 
     public void EnterWTD()
     {
+        AudioSvc.Instance.PlayUIAudio();
         trustWnd.SetWndState();
     }
 
     public void EnterHT()
     {
+        AudioSvc.Instance.PlayUIAudio();
         contractWnd.SetWndState();
     }
 
     public void EnterKH()
     {
+        AudioSvc.Instance.PlayUIAudio();
         customerWnd.SetWndState();
     }
 
     public void EnterJA()
     {
+        AudioSvc.Instance.PlayUIAudio();
         overTaskWnd.SetWndState();
     }
     public void EnterSearch()
     {
+        AudioSvc.Instance.PlayUIAudio();
         searchWnd.SetWndState();
+    }
+
+    public void EnterTaskList()
+    {
+        AudioSvc.Instance.PlayUIAudio();
+        taskListWnd.SetWndState();
     }
 }

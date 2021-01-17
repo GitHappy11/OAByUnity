@@ -17,4 +17,6 @@ public class SystemRoot : MonoBehaviour
         resSvc = ResSvc.Instance;
         audioSvc = AudioSvc.Instance;
     }
+
+   
 }

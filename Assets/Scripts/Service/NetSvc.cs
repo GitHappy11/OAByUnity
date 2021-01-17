@@ -45,11 +45,11 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     public void OnStatusChanged(StatusCode statusCode)
     {
         LocalData.statusCode = statusCode;
-        Debug.Log(statusCode);
+
     }
     public void DebugReturn(DebugLevel level, string message)
     {
-        Debug.Log("ServerInfo:" + "--Level:" + level + "--Message:" + message);
+        Debug.LogWarning("ServerInfo:" + "--Level:" + level + "--Message:" + message);
     }
     #endregion
     private void Start()

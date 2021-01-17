@@ -33,4 +33,9 @@ public class MainWnd : WindowRoot
     {
         MainSys.Instance.EnterSearch();
     }
+
+    public void ClickTaskList()
+    {
+        MainSys.Instance.EnterTaskList();
+    }
 }

@@ -23,6 +23,7 @@ public class DynamicWnd : WindowRoot
 
     public void ClickSureBtn()
     {
+        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
         SetWndState(false);
     }
 }

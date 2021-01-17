@@ -11,5 +11,8 @@ public class Constants : MonoBehaviour
 {
 
 
+
+
     public const string audioBGByElectricRomeo = "ElectricRomeo";
+    public const string audioUIByUIClickBtn = "uiClickBtn";
 }
