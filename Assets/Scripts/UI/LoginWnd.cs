@@ -46,7 +46,7 @@ public class LoginWnd : WindowRoot
             PlayerPrefs.SetString("Acct",acct);
             PlayerPrefs.SetString("Pass",password);
 
-            if (LocalData.statusCode==ExitGames.Client.Photon.StatusCode.Connect)
+            if (NetSvc.Instance.statusCode==ExitGames.Client.Photon.StatusCode.Connect)
             {
                 //发送网络消息 这里先假设 登录成功
 

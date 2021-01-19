@@ -11,7 +11,9 @@ using UnityEngine;
 
 public class NetSvc : SystemRoot,IPhotonPeerListener 
 {
-    private static NetSvc Instance;
+    public static NetSvc Instance;
+
+    public StatusCode statusCode;
 
     private PhotonPeer peer;
 
@@ -44,7 +46,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     //服务器状态改变的时候执行的方法
     public void OnStatusChanged(StatusCode statusCode)
     {
-        LocalData.statusCode = statusCode;
+        this.statusCode = statusCode;
 
     }
     public void DebugReturn(DebugLevel level, string message)

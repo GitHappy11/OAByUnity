@@ -7,11 +7,11 @@
 
 
 
-using ExitGames.Client.Photon;
+
 
 public class LocalData 
 {
-    public static StatusCode statusCode;
+    
 
     
 }
