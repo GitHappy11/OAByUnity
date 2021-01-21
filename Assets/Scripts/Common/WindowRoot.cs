@@ -12,6 +12,7 @@ public class WindowRoot : MonoBehaviour
 {
     public void SetWndState(bool isActive=true)
     {
+        AudioSvc.Instance.PlayUIAudio();
         if (gameObject.activeSelf!=isActive)
         {
             SetActive(gameObject, isActive);
@@ -26,6 +27,18 @@ public class WindowRoot : MonoBehaviour
         {
             ClearWnd();
         } 
+    }
+
+    public void ClickOpenPanel(GameObject panel)
+    {
+        AudioSvc.Instance.PlayUIAudio();
+        panel.SetActive(true);
+    }
+
+    public void ClickClosePanel(GameObject panel)
+    {
+        AudioSvc.Instance.PlayUIAudio();
+        panel.SetActive(false);
     }
 
     protected virtual void InitWnd()

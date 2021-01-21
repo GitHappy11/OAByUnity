@@ -6,30 +6,28 @@
 *****************************************************/
 
 using UnityEngine;
-using DG.Tweening;
+
 
 public class ContractWnd : WindowRoot
 {
-    public Transform BgCreateContract;
-    Tween tw;
+    public GameObject ContractInformationPage;
+    public GameObject CreateContractPage;
 
-    private void Start()
+    private void Update()
     {
-        tw = DoTweenRoot.GetDownContectAni(BgCreateContract,0.5f);
-        tw.SetAutoKill(false);
-        tw.Pause();
+        if (Input.GetMouseButtonDown(1))
+        {
+            //这里可以使用列表循环
+            if (ContractInformationPage.activeSelf == true || CreateContractPage.activeSelf == true )
+            {
+                ClickClosePanel(ContractInformationPage);
+                ClickClosePanel(CreateContractPage);
+            }
+
+        }
+
     }
 
 
-    public void ClickAddBtn()
-    {
 
-        tw.PlayForward();
-    }
-    public void ClickCloseCreateContractBtn()
-    {
-        tw.PlayBackwards();
-       
-    }
-    
 }

@@ -9,8 +9,20 @@ using UnityEngine;
 
 public class CustomerWnd : WindowRoot 
 {
-    public void ClickReturnBtn()
+    public GameObject panelCreateCustomer;
+    public GameObject panelCustomerEdit;
+
+
+    private void Update()
     {
-        SetWndState(false);
+        if (Input.GetMouseButtonDown(1))
+        {
+            //这里可以使用列表循环
+            if (panelCreateCustomer.activeSelf == true || panelCustomerEdit.activeSelf == true )
+            {
+                ClickClosePanel(panelCreateCustomer);
+                ClickClosePanel(panelCustomerEdit);
+            }
+        }
     }
 }

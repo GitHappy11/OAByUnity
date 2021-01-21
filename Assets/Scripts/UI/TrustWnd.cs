@@ -9,8 +9,25 @@ using UnityEngine;
 
 public class TrustWnd:WindowRoot 
 {
-   public void ClickReturnBtn()
+
+    public GameObject panelCreateTrust;
+    public GameObject panelInfoTruc;
+
+    private void Update()
     {
-        SetWndState(false);
+        if (Input.GetMouseButtonDown(1))
+        {
+            //这里可以使用列表循环
+            if (panelCreateTrust.activeSelf == true || panelInfoTruc.activeSelf == true )
+            {
+                ClickClosePanel(panelCreateTrust);
+                ClickClosePanel(panelInfoTruc);
+            }
+
+        }
+
     }
+
+
+
 }

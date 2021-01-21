@@ -13,6 +13,8 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
 {
     public static NetSvc Instance;
 
+    //无法在Editor界面编辑
+    [HideInInspector]
     public StatusCode statusCode;
 
     private PhotonPeer peer;

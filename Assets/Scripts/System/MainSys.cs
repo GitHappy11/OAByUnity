@@ -46,12 +46,14 @@ public class MainSys : SystemRoot
     public void EnterJA()
     {
         AudioSvc.Instance.PlayUIAudio();
-        overTaskWnd.SetWndState();
+        OARoot.Instance.AddTips("该界面暂未实现！");
+        //overTaskWnd.SetWndState();
     }
     public void EnterSearch()
     {
         AudioSvc.Instance.PlayUIAudio();
-        searchWnd.SetWndState();
+        OARoot.Instance.AddTips("该界面暂未实现！");
+        //searchWnd.SetWndState();
     }
 
     public void EnterTaskList()
