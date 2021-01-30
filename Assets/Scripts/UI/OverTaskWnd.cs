@@ -9,8 +9,5 @@ using UnityEngine;
 
 public class OverTaskWnd : WindowRoot
 {
-    public void ClickReturnBtn()
-    {
-        SetWndState(false);
-    }
+   
 }

@@ -1166,6 +1166,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7202668321613384096, guid: 2efd6504a5e36ac45b7a4074d4edb095,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 158230368}
+    - target: {fileID: 7202668321613384096, guid: 2efd6504a5e36ac45b7a4074d4edb095,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseWnd
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2efd6504a5e36ac45b7a4074d4edb095, type: 3}
 --- !u!224 &158230366 stripped
@@ -2435,6 +2445,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dynamicWnd: {fileID: 158230368}
   tipsWnd: {fileID: 1563030058}
+  whiteWindows:
+  - {fileID: 1183689356}
+  - {fileID: 1826714939}
+  topWindow: {fileID: 1183689356}
 --- !u!114 &438696279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5000,7 +5014,7 @@ PrefabInstance:
     - target: {fileID: 6319215182483493821, guid: 114dd9ea354bd94499d13a53925960d0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6319215182584200575, guid: 114dd9ea354bd94499d13a53925960d0,
         type: 3}

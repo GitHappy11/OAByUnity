@@ -5,25 +5,51 @@
 	功能：弹窗式Tips
 *****************************************************/
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DynamicWnd : WindowRoot 
+public class DynamicWnd : WindowRoot
 {
     public Text txtTitle;
     public Text txtTips;
-    
+
+    public Animator animator;
+    AnimatorStateInfo info;
+
+
+
+    public new void CloseWnd()
+    {
+      
+        animator.Play("aniCloseDynameWnd");
+        StartCoroutine(Close());
+        
+
+    }
+
+
+
+    IEnumerator Close()
+    {
+        yield return new WaitForSeconds(0.6f);
+        base.CloseWnd();
+    }
+
+
+
+
+
+
+
+
 
     public void AddDynTips(string title, string tips)
     {
-        SetWndState();
+        SetWndState(this);
         txtTips.text = tips;
         txtTitle.text = title;
     }
 
-    public void ClickSureBtn()
-    {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
-        SetWndState(false);
-    }
+
 }

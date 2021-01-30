@@ -8,14 +8,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginWnd : WindowRoot 
+public class LoginWnd : WindowRoot
 {
     public InputField iptAcct;
     public InputField iptPassword;
     public GameObject notice;
     public Animation anibtnBGMusic;
 
-    public bool isAutoLogin=true;
+    public bool isAutoLogin = true;
 
     protected override void InitWnd()
     {
@@ -40,24 +40,17 @@ public class LoginWnd : WindowRoot
 
         string acct = iptAcct.text;
         string password = iptPassword.text;
-        if (acct!= ""&&password!="")
+        if (acct != "" && password != "")
         {
             //更新本地存储的账号密码
-            PlayerPrefs.SetString("Acct",acct);
-            PlayerPrefs.SetString("Pass",password);
+            PlayerPrefs.SetString("Acct", acct);
+            PlayerPrefs.SetString("Pass", password);
 
-            if (NetSvc.Instance.statusCode==ExitGames.Client.Photon.StatusCode.Connect)
-            {
-                //发送网络消息 这里先假设 登录成功
 
-                LoginSys.Instance.RspLogin();
-            }
-            else
-            {
-                OARoot.Instance.AddDynTips("检测到当前服务端未响应！进入离线测试模式！", "网络警告");
-                LoginSys.Instance.RspLogin();
-            }
-            
+            //发送网络消息 这里先假设 登录成功
+            LoginSys.Instance.RspLogin();
+
+
 
         }
         else
@@ -68,11 +61,13 @@ public class LoginWnd : WindowRoot
         }
     }
 
+
+
     public void ClickNextLoginConfirm(Image img)
     {
         AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
 
-        if (img.color.a==1)
+        if (img.color.a == 1)
         {
             img.color = new Color(1, 1, 1, 0);
             isAutoLogin = false;
@@ -82,15 +77,14 @@ public class LoginWnd : WindowRoot
             img.color = new Color(1, 1, 1, 1);
             isAutoLogin = true;
         }
-    
-    
-             
+
+
+
     }
 
     public void ClickNoticeBtn()
     {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
-        notice.SetActive(true);
+        OARoot.Instance.AddDynTips("当前暂无公告！", "公告");
     }
 
     public void ClickCloseNoice()
@@ -98,11 +92,11 @@ public class LoginWnd : WindowRoot
         AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
         notice.SetActive(false);
     }
-    
+
     public void ClickSetMusic(Image img)
     {
         AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
-        if (AudioSvc.Instance.bgMusicMode==BGMusicMode.Play)
+        if (AudioSvc.Instance.bgMusicMode == BGMusicMode.Play)
         {
             anibtnBGMusic.Stop();
             img.sprite = Resources.Load<Sprite>(PathDefine.spriteStopMusic);
@@ -114,6 +108,6 @@ public class LoginWnd : WindowRoot
             img.sprite = Resources.Load<Sprite>(PathDefine.spriteStartMusic);
             AudioSvc.Instance.SetBGAudio(BGMusicMode.Play);
         }
-        
+
     }
 }

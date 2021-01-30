@@ -49,6 +49,51 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     public void OnStatusChanged(StatusCode statusCode)
     {
         this.statusCode = statusCode;
+        switch (statusCode)
+        {
+            case StatusCode.Connect:
+                break;
+            case StatusCode.Disconnect:
+                OARoot.Instance.AddDynTips("当前网络状态不佳，无法连接服务器，进入离线模式！", "服务器连接状态");
+                break;
+            case StatusCode.Exception:
+                break;
+            case StatusCode.ExceptionOnConnect:
+                break;
+            case StatusCode.SecurityExceptionOnConnect:
+                break;
+            case StatusCode.QueueOutgoingReliableWarning:
+                break;
+            case StatusCode.QueueOutgoingUnreliableWarning:
+                break;
+            case StatusCode.SendError:
+                break;
+            case StatusCode.QueueOutgoingAcksWarning:
+                break;
+            case StatusCode.QueueIncomingReliableWarning:
+                break;
+            case StatusCode.QueueIncomingUnreliableWarning:
+                break;
+            case StatusCode.QueueSentWarning:
+                break;
+            case StatusCode.ExceptionOnReceive:
+                break;
+            case StatusCode.TimeoutDisconnect:
+                break;
+            case StatusCode.DisconnectByServer:
+                break;
+            case StatusCode.DisconnectByServerUserLimit:
+                break;
+            case StatusCode.DisconnectByServerLogic:
+                break;
+            case StatusCode.EncryptionEstablished:
+                break;
+            case StatusCode.EncryptionFailedToEstablish:
+                break;
+            default:
+                break;
+        }
+        
 
     }
     public void DebugReturn(DebugLevel level, string message)

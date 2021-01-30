@@ -10,6 +10,12 @@ using UnityEngine.UI;
 
 public class MainWnd : WindowRoot 
 {
+
+    public override void RspOpenWnd()
+    {
+        base.RspOpenWnd();
+    }
+
     public void ClickWTDBtn()
     {
         MainSys.Instance.EnterWTD();

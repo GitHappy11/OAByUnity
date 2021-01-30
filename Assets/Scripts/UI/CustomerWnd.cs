@@ -13,16 +13,5 @@ public class CustomerWnd : WindowRoot
     public GameObject panelCustomerEdit;
 
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            //这里可以使用列表循环
-            if (panelCreateCustomer.activeSelf == true || panelCustomerEdit.activeSelf == true )
-            {
-                ClickClosePanel(panelCreateCustomer);
-                ClickClosePanel(panelCustomerEdit);
-            }
-        }
-    }
+ 
 }

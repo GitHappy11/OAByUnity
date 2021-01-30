@@ -9,8 +9,5 @@ using UnityEngine;
 
 public class SearchWnd : WindowRoot
 {
-    public void ClickReturnBtn()
-    {
-        SetWndState(false);
-    }
+   
 }

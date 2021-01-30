@@ -27,38 +27,32 @@ public class MainSys : SystemRoot
 
     public void EnterWTD()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        trustWnd.SetWndState();
+        
     }
 
     public void EnterHT()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        contractWnd.SetWndState();
+        
     }
 
     public void EnterKH()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        customerWnd.SetWndState();
+        
     }
 
     public void EnterJA()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        OARoot.Instance.AddTips("该界面暂未实现！");
-        //overTaskWnd.SetWndState();
+        
     }
     public void EnterSearch()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        OARoot.Instance.AddTips("该界面暂未实现！");
-        //searchWnd.SetWndState();
+        
     }
 
+    //网络消息接收
     public void EnterTaskList()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        taskListWnd.SetWndState();
+        //网络消息接收到后再打开界面传送参数
+        taskListWnd.RspOpenWnd();
     }
 }

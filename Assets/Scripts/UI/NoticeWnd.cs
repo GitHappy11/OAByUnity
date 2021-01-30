@@ -10,18 +10,5 @@ using UnityEngine;
 public class NoticeWnd : WindowRoot
 {
 
-    protected override void InitWnd()
-    {
-
-    }
-
-
-
-
-
-    public void CloseWnd()
-    {
-        SetWndState(false);
-
-    }
+   
 }

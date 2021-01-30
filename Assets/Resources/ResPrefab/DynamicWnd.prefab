@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 158230370}
   - component: {fileID: 158230368}
   - component: {fileID: 158230369}
+  - component: {fileID: 278676378}
   m_Layer: 5
   m_Name: DynamicWnd
   m_TagString: Untagged
@@ -217,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtTitle: {fileID: 8549034903045324846}
   txtTips: {fileID: 2262225620825680956}
+  animator: {fileID: 278676378}
 --- !u!114 &158230369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -246,6 +248,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &278676378
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202668321099699336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1bc288c40a950e488f7171866043b82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7202668321368671669
 GameObject:
   m_ObjectHideFlags: 0

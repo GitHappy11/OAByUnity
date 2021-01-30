@@ -9,15 +9,5 @@ using UnityEngine;
 
 public class PanelSubClickSelect : WindowRoot 
 {
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            //这里可以使用列表循环
-            if (gameObject.activeSelf == true)
-            {
-                ClickClosePanel(gameObject);
-            }
-        }
-    }
+    
 }

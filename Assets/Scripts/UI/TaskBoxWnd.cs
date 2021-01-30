@@ -9,8 +9,5 @@ using UnityEngine;
 
 public class TaskBoxWnd : WindowRoot 
 {
-    public void ClickReturnBtn()
-    {
-        SetWndState(false);
-    }
+    
 }

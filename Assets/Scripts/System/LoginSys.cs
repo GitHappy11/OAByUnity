@@ -13,7 +13,7 @@ public class LoginSys : SystemRoot
 
     public LoginWnd loginWnd;
     public MainWnd mainWnd;
- 
+    
 
 
     public override void InitSys()
@@ -22,9 +22,11 @@ public class LoginSys : SystemRoot
         base.InitSys();
     }
 
+
+
     public void EnterLogin()
     {
-        loginWnd.SetWndState();
+        
     }
 
   
@@ -33,10 +35,10 @@ public class LoginSys : SystemRoot
 
     public void RspLogin()
     {
-        mainWnd.SetWndState();
-
-        loginWnd.SetWndState(false); 
+        mainWnd.RspOpenWnd();
     }
+
+
 
 
     

@@ -10,9 +10,10 @@ using UnityEngine.UI;
 
 public class WindowRoot : MonoBehaviour 
 {
-    public void SetWndState(bool isActive=true)
+    public void SetWndState(WindowRoot window,bool isActive= true)
     {
         AudioSvc.Instance.PlayUIAudio();
+        
         if (gameObject.activeSelf!=isActive)
         {
             SetActive(gameObject, isActive);
@@ -22,33 +23,39 @@ public class WindowRoot : MonoBehaviour
         if (isActive)
         {
             InitWnd();
+            OARoot.Instance.windowStack.Push(window);
+
+
         }
         else
         {
-            ClearWnd();
+            CloseWnd();
         } 
     }
 
-    public void ClickOpenPanel(GameObject panel)
+
+    //Sys回调获取后打开界面
+    public virtual void RspOpenWnd()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        panel.SetActive(true);
+        SetWndState(this, true);
     }
 
-    public void ClickClosePanel(GameObject panel)
+    public virtual void RspCloseWnd()
     {
-        AudioSvc.Instance.PlayUIAudio();
-        panel.SetActive(false);
+        SetWndState(this, false);
     }
+
+
 
     protected virtual void InitWnd()
     {
-
+        
     }
 
-    protected virtual void ClearWnd()
+    protected virtual void CloseWnd()
     {
-        
+        OARoot.Instance.windowStack.Pop();
+        SetActive(gameObject, false);
     }
 
 

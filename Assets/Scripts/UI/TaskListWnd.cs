@@ -16,22 +16,18 @@ public class TaskListWnd : WindowRoot
     public GameObject panelTrustDetails;
 
 
+    public override void RspOpenWnd()
+    {
+        base.RspOpenWnd();
+    }
 
     
-
-    private void Update()
+    //按钮点击后
+    public void ClickOpenWnd()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            //这里可以使用列表循环
-            if (panelTaskDetail.activeSelf == true||panelCreatTask.activeSelf == true ||panelTrustDetails.activeSelf == true)
-            {
-                ClickClosePanel(panelTrustDetails);
-                ClickClosePanel(panelCreatTask);
-                ClickClosePanel(panelTaskDetail);
-            }
-         
-        }
-          
+        //测试使用 假设网络消息已经接收完毕
+        MainSys.Instance.EnterTaskList();
     }
+
+
 }
