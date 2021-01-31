@@ -5,28 +5,51 @@
 	功能：任务列表界面
 *****************************************************/
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TaskListWnd : WindowRoot
 {
 
-    public GameObject panelTaskDetail;
-    public GameObject panelCreatTask;
-    public GameObject panelTrustDetails;
+    public PanelTaskDetails panelTaskDetails;
+    public PanelCreateTask panelCreatTask;
+    public PanelTrustDetails panelTrustDetails;
 
+    
+    public Transform scrollTrans;
 
-    public override void RspOpenWnd()
+    private void RefreshUI(List<TrustDetailData> trustDetailDatasLst)
     {
-        base.RspOpenWnd();
+        //刷新前先把之前的先删除
+        for (int i = 0; i < scrollTrans.childCount; i++)
+        {
+            Destroy(scrollTrans.GetChild(i).gameObject);
+        }
+
+
+        for (int i = 0; i < trustDetailDatasLst.Count; i++)
+        {
+            //GameObject btnDetailData=resSvc.
+        }
+    }
+
+
+    public void ReqOpenWnd(List<TrustDetailData> trustDetailDatasLst)
+    {
+        RefreshUI(trustDetailDatasLst);
+        base.ReqOpenWnd();
     }
 
     
-    //按钮点击后
-    public void ClickOpenWnd()
+
+
+    public void ClickTrustDetailBtn()
     {
-        //测试使用 假设网络消息已经接收完毕
-        MainSys.Instance.EnterTaskList();
+        //请求网络数据 假设服务器回应
+        
+
+        SetWndState(panelTrustDetails);
     }
 
 

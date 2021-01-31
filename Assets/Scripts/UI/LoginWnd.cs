@@ -17,9 +17,10 @@ public class LoginWnd : WindowRoot
 
     public bool isAutoLogin = true;
 
-    protected override void InitWnd()
+    protected override void OpenWndEvent()
     {
-        base.InitWnd();
+        audioSvc.PlayBGMusic(Constants.audioBGByElectricRomeo);
+        base.OpenWndEvent();
         //获取本地存储的账号密码
         if (PlayerPrefs.HasKey("Acct") && PlayerPrefs.HasKey("Pass"))
         {
@@ -36,7 +37,7 @@ public class LoginWnd : WindowRoot
 
     public void ClickLoginBtn()
     {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
+        audioSvc.PlayUIAudio(Constants.audioUIByUIClickBtn);
 
         string acct = iptAcct.text;
         string password = iptPassword.text;
@@ -60,12 +61,12 @@ public class LoginWnd : WindowRoot
 
         }
     }
-
+    
 
 
     public void ClickNextLoginConfirm(Image img)
     {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
+        audioSvc.PlayUIAudio(Constants.audioUIByUIClickBtn);
 
         if (img.color.a == 1)
         {
@@ -84,29 +85,37 @@ public class LoginWnd : WindowRoot
 
     public void ClickNoticeBtn()
     {
-        OARoot.Instance.AddDynTips("当前暂无公告！", "公告");
+        if (notice!=null)
+        {
+            OARoot.Instance.AddDynTips("当前暂无公告！", "公告");
+        }
+        else
+        {
+            OARoot.Instance.AddDynTips(gameObject, System.Reflection.MethodBase.GetCurrentMethod().Name, "未找到实例对象！");
+        }
+        
     }
 
     public void ClickCloseNoice()
     {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
+        audioSvc.PlayUIAudio(Constants.audioUIByUIClickBtn);
         notice.SetActive(false);
     }
 
     public void ClickSetMusic(Image img)
     {
-        AudioSvc.Instance.PlayUIAudio(Constants.audioUIByUIClickBtn);
-        if (AudioSvc.Instance.bgMusicMode == BGMusicMode.Play)
+        audioSvc.PlayUIAudio(Constants.audioUIByUIClickBtn);
+        if (audioSvc.bgMusicMode == BGMusicMode.Play)
         {
             anibtnBGMusic.Stop();
             img.sprite = Resources.Load<Sprite>(PathDefine.spriteStopMusic);
-            AudioSvc.Instance.SetBGAudio(BGMusicMode.Pause);
+            audioSvc.SetBGAudio(BGMusicMode.Pause);
         }
         else
         {
             anibtnBGMusic.Play();
             img.sprite = Resources.Load<Sprite>(PathDefine.spriteStartMusic);
-            AudioSvc.Instance.SetBGAudio(BGMusicMode.Play);
+            audioSvc.SetBGAudio(BGMusicMode.Play);
         }
 
     }

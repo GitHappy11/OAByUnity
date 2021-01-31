@@ -11,9 +11,9 @@ using UnityEngine.UI;
 public class MainWnd : WindowRoot 
 {
 
-    public override void RspOpenWnd()
+    public override void ReqOpenWnd()
     {
-        base.RspOpenWnd();
+        base.ReqOpenWnd();
     }
 
     public void ClickWTDBtn()
@@ -42,6 +42,8 @@ public class MainWnd : WindowRoot
 
     public void ClickTaskList()
     {
-        MainSys.Instance.EnterTaskList();
+        NetReqTaskList netReqTaskList = new NetReqTaskList();
+        //假设触发回调
+        netReqTaskList.ReqData();
     }
 }

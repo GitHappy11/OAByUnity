@@ -5,6 +5,7 @@
 	功能：主要界面
 *****************************************************/
 
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MainSys : SystemRoot 
@@ -50,9 +51,9 @@ public class MainSys : SystemRoot
     }
 
     //网络消息接收
-    public void EnterTaskList()
+    public void EnterTaskList(List<TrustDetailData> trustDetailDatasLst)
     {
         //网络消息接收到后再打开界面传送参数
-        taskListWnd.RspOpenWnd();
+        taskListWnd.ReqOpenWnd(trustDetailDatasLst);
     }
 }

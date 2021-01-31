@@ -19,6 +19,7 @@ public class AudioSvc : SystemRoot
 
     public override void InitSys()
     {
+        base.InitSys();
         Instance = this;
 
         bgAudio = GameObject.Find("BGAudio").GetComponent<AudioSource>();
@@ -32,7 +33,7 @@ public class AudioSvc : SystemRoot
     /// <param name="isLoop">是否循环</param>
     public void PlayBGMusic(string name, bool isLoop = true)
     {
-        AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/BGM/" + name, true);
+        AudioClip audio = resSvc.LoadAudio("ResAudio/BGM/" + name, true);
         
         //当前没有播放音乐或者当前播放的音乐和要播放的音乐不同，则切换的这个音乐
         if (bgAudio.clip == null || bgAudio.clip.name != audio.name)
@@ -44,7 +45,7 @@ public class AudioSvc : SystemRoot
     }
     public void PlayUIAudio(string name=Constants.audioUIByUIClickBtn)
     {
-        AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/UI/" + name, true);
+        AudioClip audio = resSvc.LoadAudio("ResAudio/UI/" + name, true);
         uiAudio.clip = audio;
         uiAudio.Play();
     }

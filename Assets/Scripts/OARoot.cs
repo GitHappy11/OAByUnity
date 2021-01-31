@@ -32,16 +32,15 @@ public class OARoot : MonoBehaviour
 
     private void Awake()
     {
+        Init();
         Instance = this;
         windowStack = new Stack<WindowRoot>();
-
-        Init();
-        LoadSet();
+        
     }
 
     private void Start()
     {
-        topWindow.RspOpenWnd();
+        topWindow.ReqOpenWnd();
     }
 
     private void Update()
@@ -86,7 +85,7 @@ public class OARoot : MonoBehaviour
                 }
                 else
                 {
-                    window.RspCloseWnd();
+                    window.ReqCloseWnd();
                 }
             }
            
@@ -103,8 +102,6 @@ public class OARoot : MonoBehaviour
         audioSvc.InitSys();
         NetSvc netSvc = GetComponent<NetSvc>();
         netSvc.InitSys();
-
-
         //业务模块初始化
         LoginSys loginSys = GetComponent<LoginSys>();
         loginSys.InitSys();
@@ -113,10 +110,7 @@ public class OARoot : MonoBehaviour
         mainSys.InitSys();
     }
 
-    public void LoadSet()
-    {
-        AudioSvc.Instance.PlayBGMusic(Constants.audioBGByElectricRomeo);
-    }
+   
 
     public void AddTips(string tips)
     {
@@ -125,6 +119,11 @@ public class OARoot : MonoBehaviour
 
     public void AddDynTips(string tips, string title = "提示")
     {
+        dynamicWnd.AddDynTips(title, tips);
+    }
+    public void AddDynTips(GameObject go,string methotName , string reason,string title="发生程序性错误！请报告程序员！")
+    {
+        string tips = "错误发生对象：" + go.name + "\n\n" + "错误方法：" +methotName+ "\n\n" + "错误原因：" + reason;
         dynamicWnd.AddDynTips(title, tips);
     }
 }

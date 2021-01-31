@@ -10,52 +10,57 @@ using UnityEngine.UI;
 
 public class WindowRoot : MonoBehaviour 
 {
+    protected ResSvc resSvc=null;
+    protected AudioSvc audioSvc=null;
+
+    //界面开关的必要处理
     public void SetWndState(WindowRoot window,bool isActive= true)
     {
-        AudioSvc.Instance.PlayUIAudio();
-        
-        if (gameObject.activeSelf!=isActive)
-        {
-            SetActive(gameObject, isActive);
-        }
-
         //打开窗口的时候初始化窗口，否则清理窗口
         if (isActive)
         {
             InitWnd();
+            OpenWndEvent();
+            SetActive(window.gameObject, true);
             OARoot.Instance.windowStack.Push(window);
-
-
         }
         else
         {
-            CloseWnd();
-        } 
-    }
-
-
-    //Sys回调获取后打开界面
-    public virtual void RspOpenWnd()
-    {
-        SetWndState(this, true);
-    }
-
-    public virtual void RspCloseWnd()
-    {
-        SetWndState(this, false);
-    }
-
-
-
-    protected virtual void InitWnd()
-    {
+            CloseWndEvent();
+            SetActive(window.gameObject, false);
+            OARoot.Instance.windowStack.Pop();
+            ClearWnd();
+        }
         
     }
 
-    protected virtual void CloseWnd()
+
+    //Sys回调获取后打开界面 (无参数) 有参数的请自定义方法
+
+    //打开界面前处理
+    public  virtual void ReqOpenWnd()
     {
-        OARoot.Instance.windowStack.Pop();
-        SetActive(gameObject, false);
+        SetWndState(this, true);
+        audioSvc.PlayUIAudio();
+    }
+    //关闭界面前处理
+    public  virtual void ReqCloseWnd()
+    {
+        SetWndState(this, false);
+        audioSvc.PlayUIAudio();
+    }
+
+
+    //打开界面后的事件处理
+    protected virtual void OpenWndEvent()
+    {
+        
+    }
+    //关闭界面后的事件处理
+    protected virtual void CloseWndEvent()
+    {
+        
+        
     }
 
 
@@ -103,6 +108,39 @@ public class WindowRoot : MonoBehaviour
     protected void SetText(Text txt, int num = 0)
     {
         SetText(txt, num.ToString());
+    }
+    #endregion
+
+    //初始化组件
+    private void InitWnd()
+    {
+        resSvc = ResSvc.Instance;
+        audioSvc = AudioSvc.Instance;
+    }
+    private void ClearWnd()
+    {
+        resSvc = null;
+        audioSvc = null;
+    }
+
+    //获取一个Trans对象
+    protected Transform GetTrans(Transform trans,string name)
+    {
+        if (trans != null)
+        {
+            return trans.Find(name); ;
+        }
+        else
+        {
+            OARoot.Instance.AddDynTips(gameObject,System.Reflection.MethodBase.GetCurrentMethod().Name, "寻找子物体的过程中未寻找到父物体！");
+            return transform.Find(name);
+        }
+    }
+
+    #region 按钮可改写方法
+    public virtual void ClickCloseBtn()
+    {
+        SetWndState(this,false);
     }
     #endregion
 }

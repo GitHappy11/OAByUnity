@@ -18,37 +18,33 @@ public class DynamicWnd : WindowRoot
     AnimatorStateInfo info;
 
 
+  
 
-    public new void CloseWnd()
+    public override void ReqCloseWnd()
     {
-      
         animator.Play("aniCloseDynameWnd");
-        StartCoroutine(Close());
-        
-
+        audioSvc.PlayUIAudio();
+        StartCoroutine(CloseAni());
     }
 
-
-
-    IEnumerator Close()
+    IEnumerator CloseAni()
     {
         yield return new WaitForSeconds(0.6f);
-        base.CloseWnd();
+        SetWndState(this, false);
     }
-
-
-
-
-
-
 
 
 
     public void AddDynTips(string title, string tips)
     {
-        SetWndState(this);
+        ReqOpenWnd();
         txtTips.text = tips;
         txtTitle.text = title;
+    }
+
+    public override void ClickCloseBtn()
+    {
+        ReqCloseWnd();
     }
 
 

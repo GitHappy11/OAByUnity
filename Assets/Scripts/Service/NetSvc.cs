@@ -101,6 +101,11 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         Debug.LogWarning("ServerInfo:" + "--Level:" + level + "--Message:" + message);
     }
     #endregion
+
+
+
+
+
     private void Start()
     {
         ServerSetup();
@@ -111,3 +116,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
 
 }
+
+//服务器响应后回调（测试使用）
+
+

@@ -23,9 +23,9 @@ public class TipsWnd : WindowRoot
         aniTips = ani.GetClip("aniTips");
     }
 
-    protected override void InitWnd()
+    protected override void OpenWndEvent()
     {
-        base.InitWnd();
+        base.OpenWndEvent();
         SetActive(txtTips, false); 
     }
 
