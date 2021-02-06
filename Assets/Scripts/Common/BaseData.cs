@@ -6,13 +6,26 @@
 *****************************************************/
 
 
-public class BaseData<T>  
+public class BaseData
 {
     public int id;
 }
 
 //直接继承无法在外部拿到，需要填写泛型
-public class TrustDetailData:BaseData<TrustDetailData>
+public class TrustDetailData:BaseData
 {
-    public string groupName;
+    public string trustNumb;
+    public string trustContent;
+    public string trustClass;
+    public string trustClass2;
+    public string date;
+    public string team;
 }
+
+public class ElementData:BaseData
+{
+    public string date;
+    public string title;
+    public bool isNew;
+}
+

@@ -20,17 +20,18 @@ public class DynamicWnd : WindowRoot
 
   
 
-    public override void ReqCloseWnd()
+    public void CloseWnd()
     {
         animator.Play("aniCloseDynameWnd");
         audioSvc.PlayUIAudio();
         StartCoroutine(CloseAni());
+
     }
 
     IEnumerator CloseAni()
     {
         yield return new WaitForSeconds(0.6f);
-        SetWndState(this, false);
+        ReqCloseWnd();
     }
 
 
@@ -44,7 +45,7 @@ public class DynamicWnd : WindowRoot
 
     public override void ClickCloseBtn()
     {
-        ReqCloseWnd();
+        CloseWnd();
     }
 
 

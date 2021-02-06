@@ -11,5 +11,16 @@ public class PathDefine : MonoBehaviour
 {
     public const string spriteStartMusic = "ResUI/LoginUI/音乐正常播放";
     public const string spriteStopMusic= "ResUI/LoginUI/音乐暂停";
-    
+
+    #region PrefabsPath
+    //btn
+    public const string btnTrustDetailPrefab= "ResPrefab/Item/btn/btnTrustDetail";
+    public const string btnElementPrefab = "ResPrefab/Item/btn/btnElement";
+
+
+
+    #endregion
+
+
+
 }

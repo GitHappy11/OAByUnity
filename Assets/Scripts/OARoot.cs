@@ -23,6 +23,8 @@ public class OARoot : MonoBehaviour
 
     //显示在最上方的窗口
     public WindowRoot topWindow;
+    //当前窗口
+    private WindowRoot nowWindow;
 
     [HideInInspector]
     public Stack<WindowRoot> windowStack;
@@ -45,13 +47,16 @@ public class OARoot : MonoBehaviour
 
     private void Update()
     {
-
-        topWindow = windowStack.Peek();
         
+        topWindow = windowStack.Peek();
 
+        if (nowWindow!=topWindow)
+        {
+            Debug.Log("当前栈数：" + windowStack.Count + "---顶部窗口：" + topWindow.name);
+            nowWindow = topWindow;
+        }
 
-
-        Debug.Log("当前栈数：" + windowStack.Count + "---顶部窗口：" + topWindow.name);
+        
         InputMouse();
 
         
@@ -123,7 +128,7 @@ public class OARoot : MonoBehaviour
     }
     public void AddDynTips(GameObject go,string methotName , string reason,string title="发生程序性错误！请报告程序员！")
     {
-        string tips = "错误发生对象：" + go.name + "\n\n" + "错误方法：" +methotName+ "\n\n" + "错误原因：" + reason;
+        string tips = "错误发生对象：" + go.name + "\n\n" + "错误方法：" +methotName+ "\n\n" + "错误原因：" + reason+ "\n\n"+ "请按Q打开开发者控制台查看详情!";
         dynamicWnd.AddDynTips(title, tips);
     }
 }

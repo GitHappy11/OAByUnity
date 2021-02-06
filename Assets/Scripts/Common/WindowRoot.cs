@@ -14,12 +14,10 @@ public class WindowRoot : MonoBehaviour
     protected AudioSvc audioSvc=null;
 
     //界面开关的必要处理
-    public void SetWndState(WindowRoot window,bool isActive= true)
+    private void SetWndState(WindowRoot window,bool isActive= true)
     {
-        //打开窗口的时候初始化窗口，否则清理窗口
         if (isActive)
         {
-            InitWnd();
             OpenWndEvent();
             SetActive(window.gameObject, true);
             OARoot.Instance.windowStack.Push(window);
@@ -29,7 +27,6 @@ public class WindowRoot : MonoBehaviour
             CloseWndEvent();
             SetActive(window.gameObject, false);
             OARoot.Instance.windowStack.Pop();
-            ClearWnd();
         }
         
     }
@@ -37,9 +34,11 @@ public class WindowRoot : MonoBehaviour
 
     //Sys回调获取后打开界面 (无参数) 有参数的请自定义方法
 
+    //理解为Awake
     //打开界面前处理
     public  virtual void ReqOpenWnd()
     {
+        InitWnd();
         SetWndState(this, true);
         audioSvc.PlayUIAudio();
     }
@@ -48,9 +47,10 @@ public class WindowRoot : MonoBehaviour
     {
         SetWndState(this, false);
         audioSvc.PlayUIAudio();
+        ClearWnd();
     }
 
-
+    //理解为Start
     //打开界面后的事件处理
     protected virtual void OpenWndEvent()
     {

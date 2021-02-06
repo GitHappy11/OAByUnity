@@ -17,13 +17,34 @@ public class NetReqTaskList:Request
         TrustDetailData trustDetailData = new TrustDetailData
         {
             id = 1000000,
-            groupName = "测试组"
+            trustNumb="202102062231",
+            trustContent="某某路，某某街，项目建设用地",
+            trustClass="水面",
+            trustClass2="用水勘测定界",
+            date="已经进行作业：100日",
+            team="Happy11"
         };
 
         List<TrustDetailData> trustDetailDatasLst = new List<TrustDetailData>();
         trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+        trustDetailDatasLst.Add(trustDetailData);
+
+        ElementData elementData = new ElementData
+        {
+            date = "202102062231",
+            title = "Unity游戏开发计划外包合同",
+            isNew = false,
+        };
+
+        List<ElementData> elementDatasLst = new List<ElementData>();
+        elementDatasLst.Add(elementData);
 
 
-        MainSys.Instance.EnterTaskList(trustDetailDatasLst);
+        MainSys.Instance.EnterTaskList(trustDetailDatasLst, elementDatasLst);
     }
 }

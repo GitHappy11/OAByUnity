@@ -17,6 +17,7 @@ public class ResSvc : SystemRoot
         Instance = this;
     }
 
+    #region  缓存字典
     //音乐资源缓存字典
     private Dictionary<string, AudioClip> audioDict = new Dictionary<string, AudioClip>();
     public AudioClip LoadAudio(string path,bool cache=false)
@@ -36,4 +37,31 @@ public class ResSvc : SystemRoot
 
         return au;
     }
+
+    //游戏对象缓存字典
+    private Dictionary<string, GameObject> goDict = new Dictionary<string, GameObject>();
+    public GameObject LoadPrefab(string path,bool cache=false)
+    {
+        GameObject prefab;
+        //这里已经读取了
+        if (!goDict.TryGetValue(path,out prefab))
+        {
+            prefab = Resources.Load<GameObject>(path);
+            if (cache)
+            {
+                goDict.Add(path, prefab);
+            }
+        }
+        GameObject go = null;
+        if (prefab!=null)
+        {
+            go= Instantiate(prefab);
+        }
+
+        return go;
+    }
+
+
+    #endregion
+
 }

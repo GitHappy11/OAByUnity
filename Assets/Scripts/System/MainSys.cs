@@ -51,9 +51,9 @@ public class MainSys : SystemRoot
     }
 
     //网络消息接收
-    public void EnterTaskList(List<TrustDetailData> trustDetailDatasLst)
+    public void EnterTaskList(List<TrustDetailData> trustDetailDatasLst,List<ElementData> elementDatasLst)
     {
         //网络消息接收到后再打开界面传送参数
-        taskListWnd.ReqOpenWnd(trustDetailDatasLst);
+        taskListWnd.ReqOpenWnd(trustDetailDatasLst,elementDatasLst);
     }
 }
