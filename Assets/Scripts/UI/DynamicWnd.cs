@@ -48,5 +48,9 @@ public class DynamicWnd : WindowRoot
         CloseWnd();
     }
 
-
+    protected override void CloseWndEvent()
+    {
+        
+    }
+   
 }

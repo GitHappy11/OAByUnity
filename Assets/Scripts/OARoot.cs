@@ -17,8 +17,10 @@ public class OARoot : MonoBehaviour
     public TipsWnd tipsWnd;
 
 
-    //白名单窗口
-    public List<WindowRoot> whiteWindows;
+    //右键白名单窗口
+    public List<WindowRoot> whiteRightWindows;
+    //栈白名单窗口
+    public List<WindowRoot> whiteStackWindows;
 
 
     //显示在最上方的窗口
@@ -35,6 +37,7 @@ public class OARoot : MonoBehaviour
     private void Awake()
     {
         Init();
+        
         Instance = this;
         windowStack = new Stack<WindowRoot>();
         
@@ -42,7 +45,8 @@ public class OARoot : MonoBehaviour
 
     private void Start()
     {
-        topWindow.ReqOpenWnd();
+        InitStack();
+        
     }
 
     private void Update()
@@ -59,7 +63,7 @@ public class OARoot : MonoBehaviour
         
         InputMouse();
 
-        
+
 
         //foreach (WindowRoot window in windowStack)
         //{
@@ -69,7 +73,6 @@ public class OARoot : MonoBehaviour
         //        window.SetActive(window.gameObject, true);
         //    }
         //}
-
 
 
 
@@ -84,7 +87,7 @@ public class OARoot : MonoBehaviour
             {
                 WindowRoot window = topWindow;
 
-                if (whiteWindows.Contains(window))
+                if (whiteRightWindows.Contains(window))
                 {
                     AddTips("此窗口无法被快捷关闭！");
                 }
@@ -115,7 +118,20 @@ public class OARoot : MonoBehaviour
         mainSys.InitSys();
     }
 
-   
+    private void InitStack()
+    {
+        Transform canvas = transform.Find("Canvas");
+        for (int i = 0; i < canvas.childCount; i++)
+        {
+            WindowRoot wnd = canvas.GetChild(i).gameObject.GetComponent<WindowRoot>();
+            if (wnd.gameObject.activeSelf ==true&&wnd!=null&&!whiteStackWindows.Contains(wnd))
+            {
+                wnd.gameObject.SetActive(false);
+            }
+        }
+
+        topWindow.ReqOpenWnd();
+    }
 
     public void AddTips(string tips)
     {

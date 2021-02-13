@@ -38,29 +38,38 @@ public class WindowRoot : MonoBehaviour
     //打开界面前处理
     public  virtual void ReqOpenWnd()
     {
-        InitWnd();
-        SetWndState(this, true);
-        audioSvc.PlayUIAudio();
+        InitWnd();   
     }
     //关闭界面前处理
     public  virtual void ReqCloseWnd()
     {
-        SetWndState(this, false);
-        audioSvc.PlayUIAudio();
-        ClearWnd();
+        ClearWnd();  
     }
 
     //理解为Start
     //打开界面后的事件处理
     protected virtual void OpenWndEvent()
     {
-        
+        audioSvc.PlayUIAudio();
     }
     //关闭界面后的事件处理
     protected virtual void CloseWndEvent()
     {
-        
-        
+        audioSvc.PlayUIAudio();
+    }
+
+    //初始化组件
+    private void InitWnd()
+    {
+        resSvc = ResSvc.Instance;
+        audioSvc = AudioSvc.Instance;
+        SetWndState(this, true);
+    }
+    private void ClearWnd()
+    {
+        SetWndState(this, false);
+        resSvc = null;
+        audioSvc = null;
     }
 
 
@@ -111,17 +120,7 @@ public class WindowRoot : MonoBehaviour
     }
     #endregion
 
-    //初始化组件
-    private void InitWnd()
-    {
-        resSvc = ResSvc.Instance;
-        audioSvc = AudioSvc.Instance;
-    }
-    private void ClearWnd()
-    {
-        resSvc = null;
-        audioSvc = null;
-    }
+    
 
     //获取一个Trans对象
     protected Transform GetTrans(Transform trans,string name)
@@ -140,7 +139,7 @@ public class WindowRoot : MonoBehaviour
     #region 按钮可改写方法
     public virtual void ClickCloseBtn()
     {
-        SetWndState(this,false);
+        ReqCloseWnd();
     }
     #endregion
 }

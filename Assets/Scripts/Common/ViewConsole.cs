@@ -21,7 +21,7 @@ public class ViewConsole : MonoBehaviour
 
         #region Inspector 面板属性
 
-        [Tooltip("快捷键-开/关控制台")]  public KeyCode ShortcutKey       = KeyCode.Q;
+        [Tooltip("快捷键-开/关控制台")]  public KeyCode ShortcutKey       = KeyCode.BackQuote;
         [Tooltip("摇动开启控制台？")]    public bool    ShakeToOpen       = true;
         [Tooltip("窗口打开加速度")]     public float   shakeAcceleration = 3f;
         [Tooltip("是否保持一定数量的日志")] public bool    restrictLogCount  = false;
@@ -96,7 +96,7 @@ public class ViewConsole : MonoBehaviour
             {
                 if (collapse && i > 0) if (logs[i].Message != logs[i - 1].Message) continue; 
                 GUI.contentColor = logTypeColors[logs[i].LogType];
-                GUILayout.Label(logs[i].Message);
+                GUILayout.Label(logs[i].Message+logs[i].StackTrace);
             }
             GUILayout.EndScrollView();     
             GUI.contentColor = Color.white; 
@@ -124,6 +124,11 @@ public class ViewConsole : MonoBehaviour
                 StackTrace = stackTrace,
                 LogType = type,
             });
+        if (type==LogType.Error||type==LogType.Exception)
+        {
+            string tips = "已经定位错误来源，请将错误代码提供给技术人员！并最好能够记住发生错误时实行的操作！以便错误复现！\n" + message +  "\n" + "详细内容请按~打开控制台查看！程序已启动保护措施！点击确认键安全退出！";
+            OARoot.Instance.AddDynTips(tips, "发生严重错误！程序即将退出！");
+        }
         DeleteExcessLogs();
         }
 

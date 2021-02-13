@@ -93,9 +93,11 @@ public class TaskListWnd : WindowRoot
     public void ClickTrustDetailBtn()
     {
         //请求网络数据 假设服务器回应
-
-
         panelTrustDetails.ReqOpenWnd();
+    }
+    public void ClickCreateBtn()
+    {
+        panelCreatTask.ReqOpenWnd();
     }
 
 
