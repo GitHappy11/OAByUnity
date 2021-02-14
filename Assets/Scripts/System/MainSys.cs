@@ -28,7 +28,7 @@ public class MainSys : SystemRoot
 
     public void EnterWTD()
     {
-        
+        customerWnd.ReqOpenWnd();
     }
 
     public void EnterHT()

@@ -9,9 +9,16 @@ using UnityEngine;
 
 public class CustomerWnd : WindowRoot 
 {
-    public GameObject panelCreateCustomer;
-    public GameObject panelCustomerEdit;
+    public PanelCreateCustomer panelCreateCustomer;
+    public PanelCustomerEdit panelCustomerEdit;
+
+
+    public void ClickOpenCreateWnd()
+    {
+        panelCreateCustomer.ReqOpenWnd();
+    }
 
 
  
+    
 }

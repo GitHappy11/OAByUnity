@@ -12,9 +12,9 @@ using UnityEngine.UI;
 public class TaskListWnd : WindowRoot
 {
 
-    public PanelTaskDetails panelTaskDetails;
+    public PanelTaskDetail panelTaskDetail;
     public PanelCreateTask panelCreatTask;
-    public PanelTrustDetails panelTrustDetails;
+    public PanelTrustDetail panelTrustDetail;
 
     
     public Transform scrollTransByTrustDetailData;
@@ -38,21 +38,28 @@ public class TaskListWnd : WindowRoot
 
         for (int i = 0; i < trustDetailDatasLst.Count; i++)
         {
-            GameObject btnDetailData = resSvc.LoadPrefab(PathDefine.btnTrustDetailPrefab, true);
-            btnDetailData.transform.SetParent(scrollTransByTrustDetailData);
-            btnDetailData.name += "_" + i;
+            GameObject btnDetailDataPrefab = resSvc.LoadPrefab(PathDefine.btnTrustDetailPrefab, true);
+            btnDetailDataPrefab.transform.SetParent(scrollTransByTrustDetailData);
+            btnDetailDataPrefab.name += "_" + i;
 
             TrustDetailData trustDetailData = trustDetailDatasLst[i];
 
 
-            SetText(GetTrans(btnDetailData.transform, "txtTrustNumb"), trustDetailData.trustNumb);
-            SetText(GetTrans(btnDetailData.transform, "txtTrustContent"), trustDetailData.trustContent);
-            SetText(GetTrans(btnDetailData.transform, "txtTrustClass"), trustDetailData.trustClass);
-            SetText(GetTrans(btnDetailData.transform, "txtTrustClass2"), trustDetailData.trustClass2);
-            SetText(GetTrans(btnDetailData.transform, "txtDate"), trustDetailData.date);
-            SetText(GetTrans(btnDetailData.transform, "txtTeam"), trustDetailData.team);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtTrustNumb"), trustDetailData.trustNumb);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtTrustContent"), trustDetailData.trustContent);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtTrustClass"), trustDetailData.trustClass);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtTrustClass2"), trustDetailData.trustClass2);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtDate"), trustDetailData.date);
+            SetText(GetTrans(btnDetailDataPrefab.transform, "txtTeam"), trustDetailData.team);
 
-            
+            Button btnDetailData = btnDetailDataPrefab.GetComponent<Button>();
+            btnDetailData.onClick.AddListener(() =>
+            {
+                ClickTrustDetailBtn(trustDetailData);
+            });
+
+
+
 
         }
         for (int i = 0; i < elementDatasLst.Count; i++)
@@ -68,6 +75,12 @@ public class TaskListWnd : WindowRoot
             SetText(GetTrans(btnElementPrefab.transform, "txtTitle"), elementData.title);
 
             SetActive(GetTrans(btnElementPrefab.transform, "imgNew"), elementData.isNew);
+
+            Button btnElement = btnElementPrefab.GetComponent<Button>();
+            btnElement.onClick.AddListener(() =>
+            {
+                ClikcElementBtn(elementData);
+            });
 
 
 
@@ -90,15 +103,27 @@ public class TaskListWnd : WindowRoot
 
 
 
-    public void ClickTrustDetailBtn()
-    {
-        //请求网络数据 假设服务器回应
-        panelTrustDetails.ReqOpenWnd();
-    }
+
     public void ClickCreateBtn()
     {
         panelCreatTask.ReqOpenWnd();
     }
+
+
+    #region 预制体生成后的信息注入点击
+    private void ClikcElementBtn(ElementData elementData)
+    {
+        panelTrustDetail.elementData = elementData;
+        panelTrustDetail.ReqOpenWnd();
+        
+    }
+    private void ClickTrustDetailBtn(TrustDetailData trustDetailData)
+    {
+        panelTaskDetail.trustDetailData = trustDetailData;
+        panelTaskDetail.ReqOpenWnd();
+    }
+
+    #endregion
 
 
 }

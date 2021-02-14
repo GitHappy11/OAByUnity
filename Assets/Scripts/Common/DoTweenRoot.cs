@@ -13,8 +13,8 @@ public class DoTweenRoot : MonoBehaviour
 {
     public static Tween GetDownContectAni(Transform transform,float sec)
     {
+        transform.localPosition = new Vector2(0, 1000);
         Tween dt = transform.DOLocalMove(new Vector2(0, 0), sec);
-
         return dt;
     }
 }

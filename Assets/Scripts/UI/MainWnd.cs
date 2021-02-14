@@ -18,7 +18,8 @@ public class MainWnd : WindowRoot
 
     public void ClickWTDBtn()
     {
-        MainSys.Instance.EnterWTD();
+        NetReqCustomer netReqCustomer = new NetReqCustomer();
+        netReqCustomer.ReqCustomerData();
     }
 
     public void ClickHTBtn()
@@ -44,6 +45,6 @@ public class MainWnd : WindowRoot
     {
         NetReqTaskList netReqTaskList = new NetReqTaskList();
         //假设触发回调
-        netReqTaskList.ReqData();
+        netReqTaskList.ReqTrustDetailData();
     }
 }

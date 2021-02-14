@@ -5,9 +5,19 @@
 	功能：创建任务界面
 *****************************************************/
 
+using DG.Tweening;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PanelCreateTask : WindowRoot
 {
+    public Transform imgimgBgCreateTaskTrans;
 
+
+    protected override void OpenWndEvent()
+    {
+        base.OpenWndEvent();
+        Tween tw = DoTweenRoot.GetDownContectAni(imgimgBgCreateTaskTrans, 2);
+        tw.PlayForward();
+    }
 }

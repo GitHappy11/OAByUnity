@@ -272,6 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59b02447d258e444ba96b107a150f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtDate: {fileID: 6719844763387890831}
+  txtTitle: {fileID: 6719844763666569020}
 --- !u!1 &3865728134909576527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,7 +3167,7 @@ GameObject:
   - component: {fileID: 6719844763666569021}
   - component: {fileID: 6719844763666569020}
   m_Layer: 5
-  m_Name: Text
+  m_Name: txtTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9556,11 +9558,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1045092859275440959}
-        m_MethodName: ClickOpenPanel
-        m_Mode: 2
+        m_MethodName: ClickCreateBtn
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 5523263320800975658}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15034,8 +15036,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1045092859275440959}
-        m_MethodName: SetWndState
-        m_Mode: 6
+        m_MethodName: ClickCloseBtn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16878,10 +16880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772f77da69c4fbf42a59083666e87a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelTaskDetails: {fileID: 0}
+  panelTaskDetail: {fileID: 8336653862194477349}
   panelCreatTask: {fileID: 1500759691022913654}
-  panelTrustDetails: {fileID: 0}
-  scrollTrans: {fileID: 0}
+  panelTrustDetail: {fileID: 552518223}
+  scrollTransByTrustDetailData: {fileID: 8431169338965749431}
+  scrollTransByElementData: {fileID: 1596319728602392167}
 --- !u!1 &6719844765175214631
 GameObject:
   m_ObjectHideFlags: 0
@@ -20616,7 +20619,7 @@ GameObject:
   - component: {fileID: 5493561366447043664}
   - component: {fileID: 8336653862194477349}
   m_Layer: 5
-  m_Name: panelTaskDetail
+  m_Name: panelTaskDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20691,6 +20694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09f9c60014030c41ba616b91933f78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtTeam: {fileID: 6719844765156706231}
 --- !u!1 &8066022001403926096
 GameObject:
   m_ObjectHideFlags: 0
@@ -20761,7 +20765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 86.499985}
+  m_AnchoredPosition: {x: 0, y: 86.49914}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7358892660778480701
@@ -20809,6 +20813,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6719844765268525538}
     m_Modifications:
+    - target: {fileID: 283978255868641201, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 283978255868641201, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 283978255868641201, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_CellSize.x
+      value: 336
+      objectReference: {fileID: 0}
+    - target: {fileID: 283978255868641201, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_CellSize.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 283978255868641201, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: 30.62
+      objectReference: {fileID: 0}
     - target: {fileID: 1093593110719131213, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
       propertyPath: m_Size
@@ -20932,7 +20961,7 @@ PrefabInstance:
     - target: {fileID: 6245897178272117738, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.33996582
+      value: -2.0999756
       objectReference: {fileID: 0}
     - target: {fileID: 6245897178272117738, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
@@ -20942,7 +20971,7 @@ PrefabInstance:
     - target: {fileID: 6245897178272117738, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -67.09491
+      value: -131.77344
       objectReference: {fileID: 0}
     - target: {fileID: 6245897178272117738, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
@@ -21004,6 +21033,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8459611044981450413, guid: e856fbc5da36bd341a735b607dca08e5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000012397766
+      objectReference: {fileID: 0}
     - target: {fileID: 8599628081429267082, guid: e856fbc5da36bd341a735b607dca08e5,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -21016,6 +21050,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e856fbc5da36bd341a735b607dca08e5, type: 3}
+--- !u!224 &8431169338965749431 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8459611044981450413, guid: e856fbc5da36bd341a735b607dca08e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 29014717471180826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6254082472051932144 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6245897178272117738, guid: e856fbc5da36bd341a735b607dca08e5,

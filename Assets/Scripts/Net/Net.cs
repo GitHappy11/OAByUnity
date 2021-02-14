@@ -12,7 +12,7 @@ using System.Collections.Generic;
 public class NetReqTaskList:Request
 {
     //假设已经接收到了服务器的数据
-    public void ReqData()
+    public void ReqTrustDetailData()
     {
         TrustDetailData trustDetailData = new TrustDetailData
         {
@@ -46,5 +46,14 @@ public class NetReqTaskList:Request
 
 
         MainSys.Instance.EnterTaskList(trustDetailDatasLst, elementDatasLst);
+    }
+    
+}
+
+public class NetReqCustomer : Request
+{
+    public void ReqCustomerData()
+    {
+        MainSys.Instance.EnterWTD();
     }
 }
