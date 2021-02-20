@@ -7,6 +7,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ResSvc : SystemRoot 
 {
@@ -60,6 +61,27 @@ public class ResSvc : SystemRoot
 
         return go;
     }
+
+
+    public Tween LoadTween(DoTweenType type,Transform trans)
+    {
+        Tween _tw = null;
+
+    
+            switch (type)
+            {
+                case DoTweenType.PanelNoraml:
+                     _tw = DoTweenRoot.GetContectAni(trans, 0.5f,new Vector2(0,1000) );
+                    break;
+                default:
+                    break;
+            }
+       
+
+        return _tw;
+
+    }         
+
 
 
     #endregion

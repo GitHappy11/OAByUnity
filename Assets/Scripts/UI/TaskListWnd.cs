@@ -97,6 +97,7 @@ public class TaskListWnd : WindowRoot
 
     protected override void OpenWndEvent()
     {
+        base.OpenWndEvent();
         RefreshUI();
     }
 

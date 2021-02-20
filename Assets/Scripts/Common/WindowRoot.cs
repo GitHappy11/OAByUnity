@@ -43,19 +43,23 @@ public class WindowRoot : MonoBehaviour
     //关闭界面前处理
     public  virtual void ReqCloseWnd()
     {
-        ClearWnd();  
+        
+        ClearWnd();
+     
     }
-
     //理解为Start
     //打开界面后的事件处理
     protected virtual void OpenWndEvent()
     {
+        OARoot.Instance.loadingWnd.gameObject.SetActive(true);
         audioSvc.PlayUIAudio();
+        
     }
     //关闭界面后的事件处理
     protected virtual void CloseWndEvent()
     {
         audioSvc.PlayUIAudio();
+        
     }
 
     //初始化组件

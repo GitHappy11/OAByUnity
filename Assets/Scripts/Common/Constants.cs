@@ -15,4 +15,8 @@ public class Constants : MonoBehaviour
 
     public const string audioBGByElectricRomeo = "ElectricRomeo";
     public const string audioUIByUIClickBtn = "uiClickBtn";
+
+
+    //Dotween动画名
+    public const string twPanelNormal="twPanelNoraml";
 }

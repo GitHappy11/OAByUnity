@@ -7,6 +7,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PanelTrustDetail : WindowRoot 
 {
@@ -14,8 +15,11 @@ public class PanelTrustDetail : WindowRoot
     public Text txtTitle;
     public ElementData elementData;
 
+    public Transform imgBgTrustDetailTrans;
+    private Tween tw;
 
 
+    
 
 
     protected override void OpenWndEvent()
@@ -23,6 +27,28 @@ public class PanelTrustDetail : WindowRoot
         base.OpenWndEvent();
         txtDate.text = elementData.date;
         txtTitle.text = elementData.title;
+        tw = resSvc.LoadTween(DoTweenType.PanelNoraml, imgBgTrustDetailTrans);
+
+        tw.PlayForward();
     }
+
+    public override void ReqCloseWnd()
+    {
+        tw.PlayBackwards();
+        audioSvc.PlayUIAudio();
+        tw.OnRewind(() =>
+        {
+            base.ReqCloseWnd();
+        });
+
+        
+        
+    }
+
+    protected override void CloseWndEvent()
+    {
+        
+    }
+
 
 }

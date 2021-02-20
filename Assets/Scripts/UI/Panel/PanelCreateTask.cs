@@ -13,11 +13,30 @@ public class PanelCreateTask : WindowRoot
 {
     public Transform imgimgBgCreateTaskTrans;
 
+    private Tween tw;
 
     protected override void OpenWndEvent()
     {
         base.OpenWndEvent();
-        Tween tw = DoTweenRoot.GetDownContectAni(imgimgBgCreateTaskTrans, 2);
+        tw = resSvc.LoadTween(DoTweenType.PanelNoraml,imgimgBgCreateTaskTrans);
         tw.PlayForward();
     }
+
+    public override void ReqCloseWnd()
+    {
+        tw.PlayBackwards();
+        audioSvc.PlayUIAudio();
+        tw.OnRewind(() =>
+        {
+
+            base.ReqCloseWnd();
+        });
+    }
+
+    protected override void CloseWndEvent()
+    {
+        
+    }
+
+ 
 }

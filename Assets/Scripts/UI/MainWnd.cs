@@ -46,5 +46,7 @@ public class MainWnd : WindowRoot
         NetReqTaskList netReqTaskList = new NetReqTaskList();
         //假设触发回调
         netReqTaskList.ReqTrustDetailData();
+ 
+       
     }
 }

@@ -15,6 +15,7 @@ public class OARoot : MonoBehaviour
 
     public DynamicWnd dynamicWnd;
     public TipsWnd tipsWnd;
+    public LoadingWnd loadingWnd;
 
 
     //右键白名单窗口
@@ -30,6 +31,8 @@ public class OARoot : MonoBehaviour
 
     [HideInInspector]
     public Stack<WindowRoot> windowStack;
+
+   
 
 
 
@@ -124,6 +127,10 @@ public class OARoot : MonoBehaviour
         for (int i = 0; i < canvas.childCount; i++)
         {
             WindowRoot wnd = canvas.GetChild(i).gameObject.GetComponent<WindowRoot>();
+            if (wnd==null)
+            {
+                break;
+            }
             if (wnd.gameObject.activeSelf ==true&&wnd!=null&&!whiteStackWindows.Contains(wnd))
             {
                 wnd.gameObject.SetActive(false);

@@ -11,10 +11,26 @@ using UnityEngine.UI;
 
 public class DoTweenRoot : MonoBehaviour 
 {
-    public static Tween GetDownContectAni(Transform transform,float sec)
+    public static Tween GetContectAni(Transform trans,float sec,Vector2 vec2)
     {
-        transform.localPosition = new Vector2(0, 1000);
-        Tween dt = transform.DOLocalMove(new Vector2(0, 0), sec);
-        return dt;
+        trans.localPosition = vec2;
+        Tween tw = trans.DOLocalMove(new Vector2(0, 0), sec);
+        tw.SetAutoKill(false);
+        return tw;
     }
+
+    public static Sequence GetColorSeq(Image img,float sec)
+    {
+        Sequence seq=DOTween.Sequence();
+        seq.Append(img.DOFade(1,0));
+        seq.Append(img.DOFade(0,sec));
+      
+        return seq;
+    }
+
+}
+
+public enum DoTweenType
+{
+    PanelNoraml
 }
