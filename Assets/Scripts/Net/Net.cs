@@ -54,6 +54,15 @@ public class NetReqCustomer : Request
 {
     public void ReqCustomerData()
     {
-        MainSys.Instance.EnterWTD();
+        CustomerData customerData = new CustomerData
+        {
+            id = 100,
+            name = "东相上工作室",
+        };
+
+        List<CustomerData> customerDataLst = new List<CustomerData>();
+        customerDataLst.Add(customerData);
+
+        MainSys.Instance.EnterWTD(customerDataLst);
     }
 }

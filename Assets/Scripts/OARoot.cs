@@ -23,14 +23,16 @@ public class OARoot : MonoBehaviour
     //栈白名单窗口
     public List<WindowRoot> whiteStackWindows;
 
+    //[HideInInspector]
+    public Stack<WindowRoot> windowStack;
+
 
     //显示在最上方的窗口
     public WindowRoot topWindow;
     //当前窗口
     private WindowRoot nowWindow;
 
-    [HideInInspector]
-    public Stack<WindowRoot> windowStack;
+    
 
    
 
@@ -88,18 +90,24 @@ public class OARoot : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
-                WindowRoot window = topWindow;
-
-                if (whiteRightWindows.Contains(window))
+                if (loadingWnd.gameObject.activeSelf == false)
                 {
-                    AddTips("此窗口无法被快捷关闭！");
+                    WindowRoot window = topWindow;
+
+                    if (whiteRightWindows.Contains(window))
+                    {
+                        AddTips("此窗口无法被快捷关闭！");
+                    }
+                    else
+                    {
+                        window.ReqCloseWnd();
+                    }
                 }
                 else
                 {
-                    window.ReqCloseWnd();
+                    AddTips("正在加载，请勿频繁操作！");
                 }
             }
-           
         }
         
     }
@@ -138,6 +146,32 @@ public class OARoot : MonoBehaviour
         }
 
         topWindow.ReqOpenWnd();
+    }
+    public void IntoStack(WindowRoot wnd)
+    {
+        if (!whiteStackWindows.Contains(wnd))
+        {
+            windowStack.Push(wnd);
+        }  
+    }
+    public void ExitStack(WindowRoot wnd)
+    {
+        if (!whiteStackWindows.Contains(wnd))
+        {
+            windowStack.Pop();
+        }
+    }
+
+   
+
+    public void AddTestDebugLog(string str,string tips="暂无调试说明")
+    {
+        Debug.LogWarning("调试内容：---" + str + "---" + tips);
+    }
+
+    public void  AddLoading()
+    {
+        loadingWnd.ReqOpenWnd();
     }
 
     public void AddTips(string tips)

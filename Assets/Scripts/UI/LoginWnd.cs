@@ -17,6 +17,8 @@ public class LoginWnd : WindowRoot
 
     public bool isAutoLogin = true;
 
+
+
     protected override void OpenWndEvent()
     {
         audioSvc.PlayBGMusic(Constants.audioBGByElectricRomeo);

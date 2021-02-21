@@ -13,20 +13,24 @@ public class WindowRoot : MonoBehaviour
     protected ResSvc resSvc=null;
     protected AudioSvc audioSvc=null;
 
+ 
+
+
     //界面开关的必要处理
-    private void SetWndState(WindowRoot window,bool isActive= true)
+    private void SetWndState(WindowRoot wnd,bool isActive= true)
     {
         if (isActive)
         {
             OpenWndEvent();
-            SetActive(window.gameObject, true);
-            OARoot.Instance.windowStack.Push(window);
+            SetActive(wnd.gameObject, true);
+            OARoot.Instance.IntoStack(wnd);
+            //OARoot.Instance.windowStack.Push(wnd);
         }
         else
         {
             CloseWndEvent();
-            SetActive(window.gameObject, false);
-            OARoot.Instance.windowStack.Pop();
+            SetActive(wnd.gameObject, false);
+            OARoot.Instance.ExitStack(wnd);
         }
         
     }
@@ -42,16 +46,13 @@ public class WindowRoot : MonoBehaviour
     }
     //关闭界面前处理
     public  virtual void ReqCloseWnd()
-    {
-        
+    { 
         ClearWnd();
-     
     }
     //理解为Start
     //打开界面后的事件处理
     protected virtual void OpenWndEvent()
     {
-        OARoot.Instance.loadingWnd.gameObject.SetActive(true);
         audioSvc.PlayUIAudio();
         
     }
@@ -59,7 +60,6 @@ public class WindowRoot : MonoBehaviour
     protected virtual void CloseWndEvent()
     {
         audioSvc.PlayUIAudio();
-        
     }
 
     //初始化组件

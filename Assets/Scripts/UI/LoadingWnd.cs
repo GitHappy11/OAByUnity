@@ -8,24 +8,43 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public  class  LoadingWnd:MonoBehaviour 
+public  class  LoadingWnd:WindowRoot,IPointerClickHandler
 {
     private Tween tw;
     public Image img;
 
 
-    private void OnEnable()
-    {
+   
 
+   
+
+
+    public override void ReqOpenWnd()
+    {
+        base.ReqOpenWnd();
         Sequence seq = DOTween.Sequence();
-        seq = DoTweenRoot.GetColorSeq(img,0.5f);
+        seq = DoTweenRoot.GetColorSeq(img, 0.3f);
         seq.PlayForward();
         seq.OnComplete(() =>
         {
-            gameObject.SetActive(false);
+            ReqCloseWnd();
         });
     }
 
-    
+    protected override void OpenWndEvent()
+    {
+        
+    }
+
+    protected override void CloseWndEvent()
+    {
+
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OARoot.Instance.AddTips("正在加载，请勿频繁操作！");
+    }
 }

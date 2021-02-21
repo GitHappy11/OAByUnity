@@ -71,7 +71,7 @@ public class ResSvc : SystemRoot
             switch (type)
             {
                 case DoTweenType.PanelNoraml:
-                     _tw = DoTweenRoot.GetContectAni(trans, 0.5f,new Vector2(0,1000) );
+                     _tw = DoTweenRoot.GetContectAni(trans, 0.5f,new Vector2(0,1000),new Vector2(0,0));
                     break;
                 default:
                     break;

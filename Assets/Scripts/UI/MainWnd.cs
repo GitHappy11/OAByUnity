@@ -14,12 +14,14 @@ public class MainWnd : WindowRoot
     public override void ReqOpenWnd()
     {
         base.ReqOpenWnd();
+        OARoot.Instance.AddLoading();
     }
 
     public void ClickWTDBtn()
     {
         NetReqCustomer netReqCustomer = new NetReqCustomer();
         netReqCustomer.ReqCustomerData();
+        OARoot.Instance.AddLoading(); 
     }
 
     public void ClickHTBtn()
@@ -46,6 +48,7 @@ public class MainWnd : WindowRoot
         NetReqTaskList netReqTaskList = new NetReqTaskList();
         //假设触发回调
         netReqTaskList.ReqTrustDetailData();
+        OARoot.Instance.loadingWnd.ReqOpenWnd();
  
        
     }

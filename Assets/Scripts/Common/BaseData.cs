@@ -29,3 +29,8 @@ public class ElementData:BaseData
     public bool isNew;
 }
 
+public class CustomerData:BaseData
+{
+    public string name;
+}
+

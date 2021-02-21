@@ -101,6 +101,12 @@ public class TaskListWnd : WindowRoot
         RefreshUI();
     }
 
+    protected override void CloseWndEvent()
+    {
+        base.CloseWndEvent();
+        OARoot.Instance.AddLoading();
+    }
+
 
 
 
@@ -109,6 +115,8 @@ public class TaskListWnd : WindowRoot
     {
         panelCreatTask.ReqOpenWnd();
     }
+
+    
 
 
     #region 预制体生成后的信息注入点击

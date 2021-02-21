@@ -26,9 +26,9 @@ public class MainSys : SystemRoot
     public SearchWnd searchWnd;
 
 
-    public void EnterWTD()
+    public void EnterWTD(List<CustomerData> customerDataLst)
     {
-        customerWnd.ReqOpenWnd();
+        customerWnd.ReqOpenWnd(customerDataLst);
     }
 
     public void EnterHT()
