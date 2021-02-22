@@ -31,23 +31,23 @@ public class MainSys : SystemRoot
         customerWnd.ReqOpenWnd(customerDataLst);
     }
 
-    public void EnterHT()
+    public void EnterHT(List<ContractData> contractDataLst)
     {
-        
+        contractWnd.ReqOpenWnd(contractDataLst);
     }
 
-    public void EnterKH()
+    public void EnterKH(List<TrustData> trustDataLst)
     {
-        
+        trustWnd.ReqOpenWnd(trustDataLst);
     }
 
     public void EnterJA()
     {
-        
+        OARoot.Instance.AddTips("此功能暂未开放。");
     }
     public void EnterSearch()
     {
-        
+        OARoot.Instance.AddTips("此功能暂未开放。");
     }
 
     //网络消息接收

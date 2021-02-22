@@ -32,5 +32,7 @@ public class DoTweenRoot : MonoBehaviour
 
 public enum DoTweenType
 {
-    PanelNoraml
+    PanelNoraml,
+    IptMove,
+        
 }

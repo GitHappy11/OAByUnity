@@ -34,3 +34,13 @@ public class CustomerData:BaseData
     public string name;
 }
 
+public class ContractData:BaseData
+{
+    public string name;
+}
+
+public class TrustData:BaseData
+{
+    public string date;
+}
+

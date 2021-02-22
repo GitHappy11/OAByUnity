@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OARoot : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class OARoot : MonoBehaviour
     //当前窗口
     private WindowRoot nowWindow;
 
+    
     
 
    
@@ -109,6 +111,12 @@ public class OARoot : MonoBehaviour
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityAction UA = new UnityAction(ExitGame);
+            AddDynTips("你确定要退出吗？", "退出程序",UA);
+           
+        }
         
     }
 
@@ -128,7 +136,6 @@ public class OARoot : MonoBehaviour
         MainSys mainSys = GetComponent<MainSys>();
         mainSys.InitSys();
     }
-
     private void InitStack()
     {
         Transform canvas = transform.Find("Canvas");
@@ -161,31 +168,32 @@ public class OARoot : MonoBehaviour
             windowStack.Pop();
         }
     }
-
-   
-
     public void AddTestDebugLog(string str,string tips="暂无调试说明")
     {
         Debug.LogWarning("调试内容：---" + str + "---" + tips);
     }
-
-    public void  AddLoading()
+    public void AddLoading()
     {
         loadingWnd.ReqOpenWnd();
     }
-
     public void AddTips(string tips)
     {
         tipsWnd.AddTips(tips);
     }
-
-    public void AddDynTips(string tips, string title = "提示")
+    public void AddDynTips(string tips, string title = "提示", UnityAction a=null)
     {
+        dynamicWnd.AddDynTips(title, tips,a);
+    }
+    public void AddDynTips(GameObject go, string methotName, string reason, string title = "发生程序性错误！请报告程序员！")
+    {
+        string tips = "错误发生对象：" + go.name + "\n\n" + "错误方法：" + methotName + "\n\n" + "错误原因：" + reason + "\n\n" + "请按Q打开开发者控制台查看详情!";
         dynamicWnd.AddDynTips(title, tips);
     }
-    public void AddDynTips(GameObject go,string methotName , string reason,string title="发生程序性错误！请报告程序员！")
+
+
+    public void ExitGame()
     {
-        string tips = "错误发生对象：" + go.name + "\n\n" + "错误方法：" +methotName+ "\n\n" + "错误原因：" + reason+ "\n\n"+ "请按Q打开开发者控制台查看详情!";
-        dynamicWnd.AddDynTips(title, tips);
+        Application.Quit();
+        Debug.LogWarning("程序已经被退出！");
     }
 }

@@ -22,11 +22,11 @@ public class CustomerWnd : WindowRoot
     private void RefreshUI()
     {
         //刷新前先把之前的先删除
-        //for (int i = 0; i < scrollTransBybtnCustomer.childCount; i++)
-        //{
-        //    Destroy(scrollTransBybtnCustomer.GetChild(i).gameObject);
-        //}
-   
+        for (int i = 0; i < scrollTransBybtnCustomer.childCount; i++)
+        {
+            Destroy(scrollTransBybtnCustomer.GetChild(i).gameObject);
+        }
+
 
         for (int i = 0; i < customerDataLst.Count; i++)
         {

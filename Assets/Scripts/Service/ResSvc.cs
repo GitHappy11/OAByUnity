@@ -73,6 +73,9 @@ public class ResSvc : SystemRoot
                 case DoTweenType.PanelNoraml:
                      _tw = DoTweenRoot.GetContectAni(trans, 0.5f,new Vector2(0,1000),new Vector2(0,0));
                     break;
+            case DoTweenType.IptMove:
+                    _tw= DoTweenRoot.GetContectAni(trans, 0.5f, trans.localPosition, new Vector2(trans.localPosition.x + 395, trans.localPosition.y));
+                break;
                 default:
                     break;
             }

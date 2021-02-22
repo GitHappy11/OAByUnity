@@ -66,3 +66,49 @@ public class NetReqCustomer : Request
         MainSys.Instance.EnterWTD(customerDataLst);
     }
 }
+
+public class NetReqContract:Request
+{
+    public void ReqContractData()
+    {
+        ContractData contractData = new ContractData
+        {
+            id = 0,
+            name = "Test-2021-001"
+        };
+        List<ContractData> contractDataLst = new List<ContractData>();
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        contractDataLst.Add(contractData);
+        MainSys.Instance.EnterHT(contractDataLst);
+    }
+}
+
+public class NetReqTrust:Request
+{
+    public void ReqTrustData()
+    {
+
+
+        TrustData trustData = new TrustData()
+        {
+            id = 1,
+            date = "202102222007"
+        };
+        List<TrustData> trustDataLst = new List<TrustData>();
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        trustDataLst.Add(trustData);
+        MainSys.Instance.EnterKH(trustDataLst);
+    }
+}

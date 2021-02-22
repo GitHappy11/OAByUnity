@@ -26,12 +26,16 @@ public class MainWnd : WindowRoot
 
     public void ClickHTBtn()
     {
-        MainSys.Instance.EnterHT();
+        NetReqContract netReqContract = new NetReqContract();
+        netReqContract.ReqContractData();
+        OARoot.Instance.AddLoading();
     }
 
     public void ClickKHBtn()
     {
-        MainSys.Instance.EnterKH();
+        NetReqTrust netReqTrust = new NetReqTrust();
+        netReqTrust.ReqTrustData();
+        OARoot.Instance.AddLoading();
     }
 
     public void ClickJABtn()
