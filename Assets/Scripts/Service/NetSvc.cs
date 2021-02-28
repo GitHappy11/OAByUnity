@@ -6,6 +6,7 @@
 *****************************************************/
 
 using ExitGames.Client.Photon;
+using System;
 using UnityEngine;
 
 
@@ -16,6 +17,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     //无法在Editor界面编辑
     [HideInInspector]
     public StatusCode statusCode;
+    private bool isReClient = false;
 
     private PhotonPeer peer;
 
@@ -52,9 +54,15 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         switch (statusCode)
         {
             case StatusCode.Connect:
+                OARoot.Instance.AddDynTips("服务器链接成功！", "服务器连接状态");
+                isReClient = false;
                 break;
             case StatusCode.Disconnect:
-                OARoot.Instance.AddDynTips("当前网络状态不佳，无法连接服务器，进入离线模式！", "服务器连接状态");
+                if (isReClient==false)
+                {
+                    OARoot.Instance.AddDynTips("当前网络状态不佳，无法连接服务器，正在重新链接！进入离线模式！", "服务器连接状态");
+                }
+                isReClient = true;
                 break;
             case StatusCode.Exception:
                 break;
@@ -93,7 +101,10 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
             default:
                 break;
         }
-        
+        if (isReClient)
+        {
+            ServerSetup();
+        }
 
     }
     public void DebugReturn(DebugLevel level, string message)
@@ -112,7 +123,9 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
     private void Update()
     {
+
         peer.Service();
+        
     }
 
 }

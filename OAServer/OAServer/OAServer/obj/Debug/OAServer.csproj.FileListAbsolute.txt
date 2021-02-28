@@ -1,0 +1,9 @@
+D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.dll
+D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.pdb
+D:\Work\PhotonServer\OAServer\OAServer\OAServer\obj\Debug\OAServer.csproj.CoreCompileInputs.cache
+D:\Work\PhotonServer\OAServer\OAServer\OAServer\obj\Debug\OAServer.dll
+D:\Work\PhotonServer\OAServer\OAServer\OAServer\obj\Debug\OAServer.pdb
+D:\Work\PhotonServer\OAServer\OAServer\OAServer\obj\Debug\OAServer.csproj.CopyComplete
+D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\log4net.config
+D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.dll.config
+D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\hibernate.cfg.xml

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--NH版本and程序集名and命名空间-->
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OAServer"
+                   namespace="OAServer.Model">
+  <!--类名 表名  进行映射-->
+  <class name="User" table="user">
+    <!--    类里面   表里面   类型  主键-->
+    <id name="IDUser" column="iduser" type="Int32">
+      <!--用本地自带的生成器自动增长-->
+      <generator class="native"></generator>
+    </id>
+    <!--非主键的写法-->
+    <property name="UserName" column="username" type="String"></property>
+    <property name="Account" column="account" type="String"></property>
+    <property name="Password" column="password" type="String"></property>
+    <property name="Role" column="role" type="Int32"></property>
+    <property name="OnlineState" column="onlinestate" type="Int32"></property>
+
+
+
+  </class>
+
+</hibernate-mapping>
