@@ -4,3 +4,9 @@ D:\Work\Unity\UnityProject\OA\Assets\Plugins\Common.dll
 D:\Work\Unity\UnityProject\OA\Assets\Plugins\Common.pdb
 D:\Work\PhotonServer\OAServer\OAServer\Common\obj\Debug\Common.dll
 D:\Work\PhotonServer\OAServer\OAServer\Common\obj\Debug\Common.pdb
+D:\Work\Unity\UnityProject\Unity\UnityProject\OA\Assets\Plugins\Common.dll.config
+D:\Work\Unity\UnityProject\Unity\UnityProject\OA\Assets\Plugins\Common.dll
+D:\Work\Unity\UnityProject\Unity\UnityProject\OA\Assets\Plugins\Common.pdb
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.dll
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.pdb

@@ -8,9 +8,69 @@
 
 
 using System.Collections.Generic;
+using ExitGames.Client.Photon;
+using UnityEngine;
+using Common;
+
+
+public class NetLogin:Request
+{
+    private readonly string _account;
+    private readonly string _password;
+    //初始化
+    public NetLogin(string account,string password)
+    {
+        opCode = OperationCode.Login;
+        _account = account;
+        _password = password;
+        DefaultRequest();
+    }
+    //发送带参数事件给服务端
+    public override void DefaultRequest()
+    {
+        Dictionary<byte, object> data = new Dictionary<byte, object>();
+        data.Add((byte)UserCode.Account, _account);
+        data.Add((byte)UserCode.password, _password);
+        NetSvc.Instance.SendRequset(opCode, data, this);
+    }
+
+    //服务端回应
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        switch ((LoginCode)operationResponse.ReturnCode)
+        {
+            case LoginCode.Success:
+                OARoot.Instance.AddTips("登录成功！");
+                LoginSys.Instance.RspLogin();
+                break;
+            case LoginCode.AccountNothing:
+                OARoot.Instance.AddTips("账号不存在！");
+                break;
+            case LoginCode.PasswordError:
+                OARoot.Instance.AddTips("账号和密码不匹配！");
+                break;
+            case LoginCode.Online:
+                OARoot.Instance.AddTips("该账号已经在线！");
+                break;
+            default:
+                break;
+        }
+        NetSvc.Instance.DeleteRequest(this);
+    }
+}
 
 public class NetReqTaskList:Request
 {
+    public override void DefaultRequest()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
     //假设已经接收到了服务器的数据
     public void ReqTrustDetailData()
     {
@@ -52,6 +112,16 @@ public class NetReqTaskList:Request
 
 public class NetReqCustomer : Request
 {
+    public override void DefaultRequest()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void ReqCustomerData()
     {
         CustomerData customerData = new CustomerData
@@ -69,6 +139,16 @@ public class NetReqCustomer : Request
 
 public class NetReqContract:Request
 {
+    public override void DefaultRequest()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void ReqContractData()
     {
         ContractData contractData = new ContractData
@@ -91,6 +171,16 @@ public class NetReqContract:Request
 
 public class NetReqTrust:Request
 {
+    public override void DefaultRequest()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void ReqTrustData()
     {
 

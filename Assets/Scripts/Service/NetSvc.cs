@@ -6,8 +6,9 @@
 *****************************************************/
 
 using ExitGames.Client.Photon;
-using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Common;
 
 
 public class NetSvc : SystemRoot,IPhotonPeerListener 
@@ -17,17 +18,15 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     //无法在Editor界面编辑
     [HideInInspector]
     public StatusCode statusCode;
+    //保存所有的Request事件
+    public Dictionary<OperationCode, Request> RequestDict = new Dictionary<OperationCode, Request>();
+    //保存所有的Event事件
+    public Dictionary<EventCode, BaseEvent> EventDict = new Dictionary<EventCode, BaseEvent>();
     private bool isReClient = false;
-
-    private PhotonPeer peer;
-
-    public override void InitSys()
-    {
-        Instance = this;
-    }
-
+    public PhotonPeer peer;
     
 
+    #region 客户端连接服务端的方法
     private void ServerSetup()
     {
         //服务器初始化
@@ -37,15 +36,36 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         peer.Connect("127.0.0.1:5055", "OA");
 
     }
+    #endregion
     #region 监听服务器方法
     public void OnEvent(EventData eventData)
     {
-       
-    }
+        EventCode code = (EventCode)eventData.Code;
+        BaseEvent e = null;
 
+        if (EventDict.TryGetValue(code, out e))
+        {
+            e.OnEvent(eventData);
+        }
+        else
+        {
+            OARoot.Instance.AddDynTips("出现网络操作错误！错误操作代码:" + eventData.Code + "此错误并不致命，但建议您重启程序并报告！记下您的操作过程以便复现！", "网络错误！");
+        }
+    }
     public void OnOperationResponse(OperationResponse operationResponse)
     {
-        
+        OperationCode opCode = (OperationCode)operationResponse.OperationCode;
+        Request request = null;
+        bool temp = RequestDict.TryGetValue(opCode, out request);
+        if (temp)
+        {
+            request.OnOperationResponse(operationResponse);
+        }
+        else
+        {
+            OARoot.Instance.AddDynTips("出现网络操作错误！错误操作代码:" + operationResponse.OperationCode + "此错误并不致命，但建议您重启程序并报告！记下您的操作过程以便复现！","网络错误！");
+        }
+
     }
     //服务器状态改变的时候执行的方法
     public void OnStatusChanged(StatusCode statusCode)
@@ -112,11 +132,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         Debug.LogWarning("ServerInfo:" + "--Level:" + level + "--Message:" + message);
     }
     #endregion
-
-
-
-
-
+    #region 服务器在Unity中运行的机制
     private void Start()
     {
         ServerSetup();
@@ -124,12 +140,63 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     private void Update()
     {
 
-        peer.Service();
-        
+        peer.Service(); 
+    }
+    #endregion
+    #region 客户端处理事件响应的方法
+    private void AddRequest(Request request)
+    {
+        //将事件加入事件字典，等待处理
+        RequestDict.Add(request.opCode, request);
     }
 
+    private void RemoveRequest(Request request)
+    {
+        //处理完的事件移除事件字典
+        RequestDict.Remove(request.opCode);
+    }
+#endregion
+
+    //处理向服务端发出的请求
+    public void SendRequset(OperationCode opCode,Dictionary<byte,object> data,Request request)
+    {
+        if (statusCode==StatusCode.Connect)
+        {
+            peer.OpCustom((byte)opCode, data, true);
+            Debug.Log("增加网络事件，事件代码:" + opCode);
+            AddRequest(request);
+        }
+        //如果不是在连接状态就说明客户端是离线模式
+        else
+        {
+            switch (opCode)
+            {
+                case OperationCode.Default:
+                    break;
+                case OperationCode.Login:
+                    OARoot.Instance.AddTips("当前处于离线模式！无法登录，进入观赏UI模式，所有数据均为缓存数据，不具有时效性。");
+                    LoginSys.Instance.RspLogin();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        
+    }
+    //服务端向客户端的回应处理后的方法
+    public void DeleteRequest(Request request)
+    {
+        RemoveRequest(request);
+    }
+
+    //网络服务初始化
+    public override void InitSys()
+    {
+        Instance = this;
+    }
 }
 
-//服务器响应后回调（测试使用）
+
 
 

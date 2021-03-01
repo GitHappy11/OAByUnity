@@ -7,3 +7,13 @@ D:\Work\PhotonServer\OAServer\OAServer\OAServer\obj\Debug\OAServer.csproj.CopyCo
 D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\log4net.config
 D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.dll.config
 D:\Work\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\hibernate.cfg.xml
+D:\Work\Unity\UnityProject\OA\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\hibernate.cfg.xml
+D:\Work\Unity\UnityProject\OA\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\log4net.config
+D:\Work\Unity\UnityProject\OA\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.dll.config
+D:\Work\Unity\UnityProject\OA\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.dll
+D:\Work\Unity\UnityProject\OA\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\OAServer\bin\OAServer.pdb
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\OAServer\obj\Debug\OAServer.csprojAssemblyReference.cache
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\OAServer\obj\Debug\OAServer.csproj.CoreCompileInputs.cache
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\OAServer\obj\Debug\OAServer.csproj.CopyComplete
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\OAServer\obj\Debug\OAServer.dll
+D:\Work\Unity\UnityProject\OA\OAServer\OAServer\OAServer\obj\Debug\OAServer.pdb

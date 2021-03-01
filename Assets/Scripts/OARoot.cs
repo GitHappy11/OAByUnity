@@ -53,7 +53,7 @@ public class OARoot : MonoBehaviour
     private void Start()
     {
         InitStack();
-        
+       
     }
 
     private void Update()
