@@ -18,13 +18,14 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     //无法在Editor界面编辑
     [HideInInspector]
     public StatusCode statusCode;
+    private StatusCode oldStatusCode;
     //保存所有的Request事件
     public Dictionary<OperationCode, Request> RequestDict = new Dictionary<OperationCode, Request>();
     //保存所有的Event事件
     public Dictionary<EventCode, BaseEvent> EventDict = new Dictionary<EventCode, BaseEvent>();
     private bool isReClient = false;
-    public PhotonPeer peer;
-    
+    public static PhotonPeer peer { get; private set; }
+
 
     #region 客户端连接服务端的方法
     private void ServerSetup()
@@ -47,10 +48,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         {
             e.OnEvent(eventData);
         }
-        else
-        {
-            OARoot.Instance.AddDynTips("出现网络操作错误！错误操作代码:" + eventData.Code + "此错误并不致命，但建议您重启程序并报告！记下您的操作过程以便复现！", "网络错误！");
-        }
+      
     }
     public void OnOperationResponse(OperationResponse operationResponse)
     {
@@ -63,7 +61,7 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         }
         else
         {
-            OARoot.Instance.AddDynTips("出现网络操作错误！错误操作代码:" + operationResponse.OperationCode + "此错误并不致命，但建议您重启程序并报告！记下您的操作过程以便复现！","网络错误！");
+           
         }
 
     }
@@ -129,7 +127,13 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
     public void DebugReturn(DebugLevel level, string message)
     {
-        Debug.LogWarning("ServerInfo:" + "--Level:" + level + "--Message:" + message);
+        
+        if (oldStatusCode!=statusCode)
+        {
+            Debug.LogWarning("ServerInfo:" + "--Level:" + level + "--Message:" + message);
+            oldStatusCode = statusCode;
+        }
+        
     }
     #endregion
     #region 服务器在Unity中运行的机制
@@ -146,8 +150,17 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     #region 客户端处理事件响应的方法
     private void AddRequest(Request request)
     {
+        Request _request = null;
         //将事件加入事件字典，等待处理
-        RequestDict.Add(request.opCode, request);
+        if (RequestDict.TryGetValue(request.opCode,out _request))
+        {
+            OARoot.Instance.AddTips("操作过于频繁，请稍后。");
+        }
+        else
+        {
+            RequestDict.Add(request.opCode, request);
+        }
+        
     }
 
     private void RemoveRequest(Request request)
@@ -163,7 +176,6 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         if (statusCode==StatusCode.Connect)
         {
             peer.OpCustom((byte)opCode, data, true);
-            Debug.Log("增加网络事件，事件代码:" + opCode);
             AddRequest(request);
         }
         //如果不是在连接状态就说明客户端是离线模式

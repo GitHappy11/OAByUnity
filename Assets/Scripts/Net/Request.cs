@@ -7,6 +7,7 @@
 
 using Common;
 using ExitGames.Client.Photon;
+using UnityEditor;
 
 
 public abstract class Request
@@ -18,5 +19,6 @@ public abstract class Request
     public abstract void DefaultRequest();
     //服务端的回应处理（可带参数）
     public abstract void OnOperationResponse(OperationResponse operationResponse);
+    
 
 }

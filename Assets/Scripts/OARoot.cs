@@ -67,7 +67,6 @@ public class OARoot : MonoBehaviour
             nowWindow = topWindow;
         }
 
-        
         InputMouse();
 
 

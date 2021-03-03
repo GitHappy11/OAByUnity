@@ -1,30 +1,32 @@
-﻿using System;
-using Common;
+﻿using Common;
 using Common.Tools;
 using OAServer.Handler;
-using Photon.SocketServer;
 using PhotonHostRuntimeInterfaces;
+using Photon.SocketServer;
 
 namespace OAServer
 {
     public class Peer : ClientPeer
     {
-        string ip;
+        readonly string ip;
         public Peer(InitRequest initRequest):base(initRequest)
         {
             ip = initRequest.RemoteIP;
+            ServerTools.log.Info(ip + "链接" );
         }
 
         //客户端断开的操作（一般做一些清理操作）
         protected override void OnDisconnect(DisconnectReason reasonCode, string reasonDetail)
         {
-            ServerRoot.Instance.log.Info(ip+"断开链接" + reasonCode.ToString());
+            ServerTools.log.Info(ip+"断开链接" + reasonCode.ToString());
         }
+
+   
 
         //客户端链接上的操作
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
-            ServerRoot.Instance.log.Info("aaaa");
+            ServerTools.log.Info("A");
             BaseHandler handler = DictTool.GetValue<OperationCode, BaseHandler>(ServerRoot.Instance.handlerDict, (OperationCode)operationRequest.OperationCode);
             if (handler!=null)
             {

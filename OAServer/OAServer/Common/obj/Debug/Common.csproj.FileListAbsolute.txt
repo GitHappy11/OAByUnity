@@ -10,3 +10,12 @@ D:\Work\Unity\UnityProject\Unity\UnityProject\OA\Assets\Plugins\Common.pdb
 D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.dll
 D:\Work\Unity\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.pdb
+D:\WorkData\UnityProject\OA\Assets\Plugins\PhotonServer\Common.dll.config
+D:\WorkData\UnityProject\OA\Assets\Plugins\PhotonServer\Common.dll
+D:\WorkData\UnityProject\OA\Assets\Plugins\PhotonServer\Common.pdb
+D:\WorkData\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\WorkData\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.dll
+D:\WorkData\UnityProject\OA\OAServer\OAServer\Common\obj\Debug\Common.pdb
+D:\WorkData\UnityProject\DarkGod\Assets\Pluging\Common.dll.config
+D:\WorkData\UnityProject\DarkGod\Assets\Pluging\Common.dll
+D:\WorkData\UnityProject\DarkGod\Assets\Pluging\Common.pdb
