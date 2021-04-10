@@ -24,6 +24,7 @@ public class MainSys : SystemRoot
     public CustomerWnd customerWnd;
     public OverTaskWnd overTaskWnd;
     public SearchWnd searchWnd;
+    public MainWnd mainWnd;
 
 
     public void EnterWTD(List<CustomerData> customerDataLst)
@@ -55,5 +56,10 @@ public class MainSys : SystemRoot
     {
         //网络消息接收到后再打开界面传送参数
         taskListWnd.ReqOpenWnd(trustDetailDatasLst,elementDatasLst);
+    }
+
+    public void EnterMain(List<PresentData> pdLst)
+    {
+        mainWnd.ReqOpenWnd(pdLst);
     }
 }

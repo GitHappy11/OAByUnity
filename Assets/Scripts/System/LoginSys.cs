@@ -30,12 +30,13 @@ public class LoginSys : SystemRoot
     }
 
   
+  
        
 
 
     public void RspLogin()
     {
-        mainWnd.ReqOpenWnd();
+        loginWnd.ReqCloseWnd();
     }
 
 

@@ -58,16 +58,19 @@ public class OARoot : MonoBehaviour
 
     private void Update()
     {
-        
-        topWindow = windowStack.Peek();
-
-        if (nowWindow!=topWindow)
+        if (windowStack.Count>=1)
         {
-            Debug.Log("当前栈数：" + windowStack.Count + "---顶部窗口：" + topWindow.name);
-            nowWindow = topWindow;
-        }
+            topWindow = windowStack.Peek();
 
-        InputMouse();
+            if (nowWindow != topWindow)
+            {
+                Debug.Log("当前栈数：" + windowStack.Count + "---顶部窗口：" + topWindow.name);
+                nowWindow = topWindow;
+            }
+
+            InputMouse();
+        }
+        
 
 
 

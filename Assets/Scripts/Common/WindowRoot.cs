@@ -8,17 +8,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WindowRoot : MonoBehaviour 
+public class WindowRoot : MonoBehaviour
 {
-    protected ResSvc resSvc=null;
-    protected AudioSvc audioSvc=null;
+    protected ResSvc resSvc = null;
+    protected AudioSvc audioSvc = null;
 
- 
+
 
 
     //界面开关的必要处理
-    private void SetWndState(WindowRoot wnd,bool isActive= true)
+    private void SetWndState(WindowRoot wnd, bool isActive = true)
     {
+
+
         if (isActive)
         {
             OpenWndEvent();
@@ -32,7 +34,21 @@ public class WindowRoot : MonoBehaviour
             SetActive(wnd.gameObject, false);
             OARoot.Instance.ExitStack(wnd);
         }
-        
+
+        //刷新当前Wnd
+
+
+        if (OARoot.Instance.windowStack.Count!=0)
+        {
+            OARoot.Instance.windowStack.Peek().RefreshAni();
+        }
+
+
+
+
+
+
+
     }
 
 
@@ -40,13 +56,13 @@ public class WindowRoot : MonoBehaviour
 
     //理解为Awake
     //打开界面前处理
-    public  virtual void ReqOpenWnd()
+    public virtual void ReqOpenWnd()
     {
-        InitWnd();   
+        InitWnd();
     }
     //关闭界面前处理
-    public  virtual void ReqCloseWnd()
-    { 
+    public virtual void ReqCloseWnd()
+    {
         ClearWnd();
     }
     //理解为Start
@@ -54,7 +70,7 @@ public class WindowRoot : MonoBehaviour
     protected virtual void OpenWndEvent()
     {
         audioSvc.PlayUIAudio();
-        
+
     }
     //关闭界面后的事件处理
     protected virtual void CloseWndEvent()
@@ -124,10 +140,16 @@ public class WindowRoot : MonoBehaviour
     }
     #endregion
 
-    
+
+
+    public virtual void RefreshAni()
+    {
+
+    }
+
 
     //获取一个Trans对象
-    protected Transform GetTrans(Transform trans,string name)
+    protected Transform GetTrans(Transform trans, string name)
     {
         if (trans != null)
         {
@@ -135,7 +157,7 @@ public class WindowRoot : MonoBehaviour
         }
         else
         {
-            OARoot.Instance.AddDynTips(gameObject,System.Reflection.MethodBase.GetCurrentMethod().Name, "寻找子物体的过程中未寻找到父物体！");
+            OARoot.Instance.AddDynTips(gameObject, System.Reflection.MethodBase.GetCurrentMethod().Name, "寻找子物体的过程中未寻找到父物体！");
             return transform.Find(name);
         }
     }

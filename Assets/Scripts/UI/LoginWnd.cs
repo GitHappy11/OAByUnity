@@ -53,6 +53,7 @@ public class LoginWnd : WindowRoot
             //发送网络消息 这里先假设 登录成功
             NetLogin netLogin = new NetLogin(acct, password);
 
+            
 
 
         }

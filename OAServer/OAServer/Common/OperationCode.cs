@@ -6,5 +6,6 @@ namespace Common
     {
         Default,
         Login,
+        MainData,
     }
 }

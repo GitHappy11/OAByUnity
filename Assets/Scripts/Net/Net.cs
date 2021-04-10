@@ -42,6 +42,7 @@ public class NetLogin:Request
             case LoginCode.Success:
                 OARoot.Instance.AddTips("登录成功！");
                 LoginSys.Instance.RspLogin();
+                NetReqMainData netReqMainData = new NetReqMainData();
                 break;
             case LoginCode.AccountNothing:
                 OARoot.Instance.AddTips("账号不存在！");
@@ -56,6 +57,61 @@ public class NetLogin:Request
                 break;
         }
         NetSvc.Instance.DeleteRequest(this);
+    }
+}
+
+public class NetReqMainData : Request
+{
+
+    public NetReqMainData()
+    {
+        opCode = OperationCode.MainData;
+
+
+        PresentData pd = new PresentData
+        {
+            id = 11,
+            date = "202104110000",
+            projectName = "三维建模",
+            userName = "Happy-11"
+
+        };
+
+        List<PresentData> PresentDataLst = new List<PresentData>();
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        PresentDataLst.Add(pd);
+        LocalData.presentDataLst = PresentDataLst;
+
+
+        DefaultRequest();
+    }
+
+    public override void DefaultRequest()
+    {
+        Dictionary<byte, object> data = new Dictionary<byte, object>();
+        
+        NetSvc.Instance.SendRequset(opCode, data, this);
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    //假设已经接收到了服务器的数据
+    public void ReqTrustDetailData()
+    {
+        
+
+
+       
     }
 }
 

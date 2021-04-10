@@ -188,7 +188,12 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
                 case OperationCode.Login:
                     OARoot.Instance.AddTips("当前处于离线模式！无法登录，进入观赏UI模式，所有数据均为缓存数据，不具有时效性。");
                     LoginSys.Instance.RspLogin();
+                    NetReqMainData netReqMainData = new NetReqMainData();
                     break;
+                case OperationCode.MainData:
+                    MainSys.Instance.EnterMain(LocalData.presentDataLst);
+                    break;
+
                 default:
                     break;
             }

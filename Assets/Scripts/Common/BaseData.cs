@@ -44,3 +44,10 @@ public class TrustData:BaseData
     public string date;
 }
 
+public class PresentData:BaseData
+{
+    public string date;
+    public string projectName;
+    public string userName;
+}
+

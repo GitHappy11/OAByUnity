@@ -23,13 +23,13 @@ public  class  LoadingWnd:WindowRoot,IPointerClickHandler
 
     public override void ReqOpenWnd()
     {
-        base.ReqOpenWnd();
+        SetActive(gameObject,true);
         Sequence seq = DOTween.Sequence();
         seq = DoTweenRoot.GetColorSeq(img, 0.3f);
         seq.PlayForward();
         seq.OnComplete(() =>
         {
-            ReqCloseWnd();
+            SetActive(gameObject, false);
         });
     }
 
