@@ -11,14 +11,14 @@ using UnityEngine;
 
 public class PanelCreateTask : WindowRoot
 {
-    public Transform imgimgBgCreateTaskTrans;
+    public Transform imgBgCreateTaskTrans;
 
     private Tween tw;
 
     protected override void OpenWndEvent()
     {
         base.OpenWndEvent();
-        tw = resSvc.LoadTween(DoTweenType.PanelNoraml,imgimgBgCreateTaskTrans);
+        tw = resSvc.LoadTween(DoTweenType.PanelNoraml,imgBgCreateTaskTrans);
         tw.PlayForward();
     }
 

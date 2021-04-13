@@ -121,7 +121,8 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
         }
         if (isReClient)
         {
-            ServerSetup();
+            //ServerSetup();
+            //Debug.Log("正在重新连接");
         }
 
     }
@@ -143,7 +144,6 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
     }
     private void Update()
     {
-
         peer.Service(); 
     }
     #endregion
@@ -192,6 +192,12 @@ public class NetSvc : SystemRoot,IPhotonPeerListener
                     break;
                 case OperationCode.MainData:
                     MainSys.Instance.EnterMain(LocalData.presentDataLst);
+                    break;
+                case OperationCode.Customer:
+                    MainSys.Instance.EnterWTD(LocalData.customerDataLst);
+                    break;
+                case OperationCode.Trust:
+                    MainSys.Instance.EnterKH(LocalData.trustDataLst);
                     break;
 
                 default:

@@ -8,19 +8,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class TrustWnd:WindowRoot 
 {
 
     public PanelCreateTrust panelCreateTrust;
-    public PanelInfoTrust panelInfoTruc;
+    public PanelInfoTrust panelInfoTrust;
+    public PanelSubClickSelect panelSubClickSelect;
+    public PanelSubClickSelect2 panelSubClickSelect2;
+    public Transform infoBoxTrans;
 
 
 
 
     public Transform scrollTransBybtnTrust;
+    public Transform btnPluging;
 
     private List<TrustData> TrustDataLst;
+
+    private Tween infoBoxTw;
+    private Tween btnPlugingTw;
 
     private void RefreshUI()
     {
@@ -66,6 +74,11 @@ public class TrustWnd:WindowRoot
     protected override void OpenWndEvent()
     {
         base.OpenWndEvent();
+        infoBoxTw= resSvc.LoadTween(DoTweenType.InfoBoxAni, infoBoxTrans);
+        btnPlugingTw = resSvc.LoadTween(DoTweenType.TransRotate, btnPluging);
+
+        InfoBoxAni();
+        
         RefreshUI();
     }
 
@@ -84,15 +97,52 @@ public class TrustWnd:WindowRoot
         panelCreateTrust.ReqOpenWnd();
     }
 
+    public void ClickStaticContractBtn()
+    {
+        panelSubClickSelect.ReqOpenWnd();
+    }
+    public void ClickAddBtn()
+    {
+        panelSubClickSelect2.ReqOpenWnd();
+    }
 
+
+
+    public void ClickInfoBoxAni()
+    {
+        InfoBoxAni();
+    }
+
+    public void InfoBoxAni()
+    {
+        
+        if (btnPluging.transform.eulerAngles.z==0)
+        {
+            infoBoxTw.PlayForward();
+            btnPlugingTw.PlayForward();
+        }
+        else
+        {
+            infoBoxTw.PlayBackwards();
+            btnPlugingTw.PlayBackwards();
+        }
+    }
+
+
+    public void ClickOrder()
+    {
+        //TODO
+        var buttonSelf = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        //Text text = buttonSelf.Find("Text").GetComponent<Text>();
+    }
 
 
     #region 预制体生成后的信息注入点击
 
     private void ClickTrustBtn(TrustData trustData)
     {
-        panelInfoTruc.trustData = trustData;
-        panelInfoTruc.ReqOpenWnd();
+        panelInfoTrust.trustData = trustData;
+        panelInfoTrust.ReqOpenWnd();
     }
 
     #endregion

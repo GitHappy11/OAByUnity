@@ -105,14 +105,7 @@ public class NetReqMainData : Request
         throw new System.NotImplementedException();
     }
 
-    //假设已经接收到了服务器的数据
-    public void ReqTrustDetailData()
-    {
-        
-
-
-       
-    }
+  
 }
 
 public class NetReqTaskList:Request
@@ -168,18 +161,10 @@ public class NetReqTaskList:Request
 
 public class NetReqCustomer : Request
 {
-    public override void DefaultRequest()
+    public NetReqCustomer()
     {
-        throw new System.NotImplementedException();
-    }
+        opCode = OperationCode.Customer;
 
-    public override void OnOperationResponse(OperationResponse operationResponse)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void ReqCustomerData()
-    {
         CustomerData customerData = new CustomerData
         {
             id = 100,
@@ -189,8 +174,23 @@ public class NetReqCustomer : Request
         List<CustomerData> customerDataLst = new List<CustomerData>();
         customerDataLst.Add(customerData);
 
-        MainSys.Instance.EnterWTD(customerDataLst);
+        LocalData.customerDataLst = customerDataLst;
+
+        DefaultRequest();
     }
+    
+    public override void DefaultRequest()
+    {
+        Dictionary<byte, object> data = new Dictionary<byte, object>();
+        NetSvc.Instance.SendRequset(opCode, data, this);
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
+   
 }
 
 public class NetReqContract:Request
@@ -227,19 +227,9 @@ public class NetReqContract:Request
 
 public class NetReqTrust:Request
 {
-    public override void DefaultRequest()
+    public NetReqTrust()
     {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnOperationResponse(OperationResponse operationResponse)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void ReqTrustData()
-    {
-
+        opCode = OperationCode.Trust;
 
         TrustData trustData = new TrustData()
         {
@@ -255,6 +245,22 @@ public class NetReqTrust:Request
         trustDataLst.Add(trustData);
         trustDataLst.Add(trustData);
         trustDataLst.Add(trustData);
-        MainSys.Instance.EnterKH(trustDataLst);
+
+        LocalData.trustDataLst = trustDataLst;
+        DefaultRequest();
     }
+
+
+    public override void DefaultRequest()
+    {
+        Dictionary<byte, object> data = new Dictionary<byte, object>();
+        NetSvc.Instance.SendRequset(opCode, data, this);
+    }
+
+    public override void OnOperationResponse(OperationResponse operationResponse)
+    {
+        throw new System.NotImplementedException();
+    }
+
+   
 }

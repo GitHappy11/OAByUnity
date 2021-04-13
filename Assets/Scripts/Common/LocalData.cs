@@ -10,5 +10,7 @@ public class LocalData
 {
 
     public static List<PresentData> presentDataLst;
-    
+    public static List<CustomerData> customerDataLst;
+    public static List<TrustData> trustDataLst;
+
 }

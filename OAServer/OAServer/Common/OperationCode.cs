@@ -7,5 +7,7 @@ namespace Common
         Default,
         Login,
         MainData,
+        Customer,
+        Trust
     }
 }

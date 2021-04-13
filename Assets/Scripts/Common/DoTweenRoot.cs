@@ -8,13 +8,20 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-
+//Local指的是轴心移动，坐标为以轴心为准
 public class DoTweenRoot : MonoBehaviour 
 {
-    public static Tween GetContectAni(Transform trans,float sec,Vector2 startVec2,Vector2 endVec2)
+    public static Tween TransformMoveByTw(Transform trans,float sec,Vector2 startVec2,Vector2 endVec2)
     {
         trans.localPosition = startVec2;
         Tween tw = trans.DOLocalMove(endVec2, sec);
+        tw.SetAutoKill(false);
+        return tw;
+    }
+    public static Tween TransformRotaByTw(Transform trans, float sec, Vector3 startVec3, Vector3 endVec3)
+    {
+        trans.eulerAngles = startVec3;
+        Tween tw = trans.DOLocalRotate(endVec3, sec);
         tw.SetAutoKill(false);
         return tw;
     }
@@ -34,5 +41,7 @@ public enum DoTweenType
 {
     PanelNoraml,
     IptMove,
+    InfoBoxAni,
+    TransRotate,
         
 }

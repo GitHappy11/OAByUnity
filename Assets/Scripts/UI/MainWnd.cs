@@ -26,13 +26,12 @@ public class MainWnd : WindowRoot
         base.ReqOpenWnd();
         OARoot.Instance.AddLoading();
         presentDataLst = lst;
-        Debug.Log(lst.Count);
         RefreshUI();
     }
     public void ClickWTDBtn()
     {
-        NetReqCustomer netReqCustomer = new NetReqCustomer();
-        netReqCustomer.ReqCustomerData();
+        NetReqTrust netReqTrust = new NetReqTrust();
+        
         OARoot.Instance.AddLoading();
     }
     public void ClickHTBtn()
@@ -43,9 +42,9 @@ public class MainWnd : WindowRoot
     }
     public void ClickKHBtn()
     {
-        NetReqTrust netReqTrust = new NetReqTrust();
-        netReqTrust.ReqTrustData();
+        NetReqCustomer netReqCustomer = new NetReqCustomer();
         OARoot.Instance.AddLoading();
+        
     }
     public void ClickJABtn()
     {
