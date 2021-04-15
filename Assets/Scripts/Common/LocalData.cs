@@ -13,4 +13,7 @@ public class LocalData
     public static List<CustomerData> customerDataLst;
     public static List<TrustData> trustDataLst;
 
+
+    public static string bugContent;
+
 }

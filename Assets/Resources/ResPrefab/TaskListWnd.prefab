@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4478669194191067555}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9984791
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f141005ae1cfe3b4fad1d0e05a594566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgimgBgCreateTaskTrans: {fileID: 6719844765058339030}
+  imgBgCreateTaskTrans: {fileID: 6719844765058339030}
 --- !u!1 &6719844763345575389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,6 +2064,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763431273882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2834,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763539703848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,6 +3124,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763576051974
 GameObject:
   m_ObjectHideFlags: 0
@@ -5056,6 +5059,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763816282196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,6 +5905,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763949104023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,6 +6045,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844763968034763
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,6 +6455,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764001365613
 GameObject:
   m_ObjectHideFlags: 0
@@ -7527,6 +7534,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764076507735
 GameObject:
   m_ObjectHideFlags: 0
@@ -8768,6 +8776,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764260694438
 GameObject:
   m_ObjectHideFlags: 0
@@ -9294,6 +9303,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764335307043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9632,6 +9642,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764369585509
 GameObject:
   m_ObjectHideFlags: 0
@@ -10561,7 +10572,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6719844764467077222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435691652}
+        m_MethodName: ClickRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6719844764478140354
 GameObject:
   m_ObjectHideFlags: 0
@@ -10749,6 +10771,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764490219383
 GameObject:
   m_ObjectHideFlags: 0
@@ -11735,6 +11758,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764604995560
 GameObject:
   m_ObjectHideFlags: 0
@@ -12693,6 +12717,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844764766306457
 GameObject:
   m_ObjectHideFlags: 0
@@ -13082,7 +13107,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6719844764797338020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435691652}
+        m_MethodName: ClickLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6719844764797880182
 GameObject:
   m_ObjectHideFlags: 0
@@ -15583,6 +15619,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844765009983069
 GameObject:
   m_ObjectHideFlags: 0
@@ -17264,6 +17301,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844765156706225
 GameObject:
   m_ObjectHideFlags: 0
@@ -18346,6 +18384,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844765230860682
 GameObject:
   m_ObjectHideFlags: 0
@@ -18963,6 +19002,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!1 &6719844765268525549
 GameObject:
   m_ObjectHideFlags: 0
@@ -18974,6 +19014,7 @@ GameObject:
   - component: {fileID: 6719844765268525538}
   - component: {fileID: 6719844765268525536}
   - component: {fileID: 6719844765268525539}
+  - component: {fileID: 1435691652}
   m_Layer: 5
   m_Name: imgInformationBox
   m_TagString: Untagged
@@ -19043,6 +19084,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1435691652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6719844765268525549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f485c078776e8b84fb520b422bfff993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 8431169338965749431}
+  moveDis: 350
+  moveTime: 0.2
 --- !u!1 &6719844765268977294
 GameObject:
   m_ObjectHideFlags: 0
@@ -21433,7 +21489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 86.49996}
+  m_AnchoredPosition: {x: 0, y: 86.49969}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7358892660778480701

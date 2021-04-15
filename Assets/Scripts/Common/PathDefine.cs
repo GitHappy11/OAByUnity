@@ -20,6 +20,7 @@ public class PathDefine : MonoBehaviour
     public const string btnContractPrefab = "ResPrefab/Item/btn/btnContract";
     public const string btnTrustPrefab = "ResPrefab/Item/btn/btnTrust";
     public const string btnPresentPrefab = "ResPrefab/Item/btnPresent";
+    public const string btnNullPrefab = "ResPrefab/Item/btn/btnNull";
 
 
 

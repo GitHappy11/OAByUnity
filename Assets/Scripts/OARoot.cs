@@ -69,7 +69,14 @@ public class OARoot : MonoBehaviour
             }
 
             InputMouse();
+            
         }
+
+        if (LocalData.bugContent!=null)
+        {
+            Debug.Log(LocalData.bugContent);
+        }
+        
         
         
 
@@ -193,6 +200,7 @@ public class OARoot : MonoBehaviour
         dynamicWnd.AddDynTips(title, tips);
     }
 
+    
 
     public void ExitGame()
     {

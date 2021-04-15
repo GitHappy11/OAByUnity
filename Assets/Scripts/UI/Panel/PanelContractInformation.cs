@@ -12,8 +12,10 @@ public class PanelContractInformation : WindowRoot
 {
     public ContractData contractData;
     public Transform imgBgContractInformationTrans;
-
+    public GameObject imgNodeBox;
+    public GameObject[] lightImagelst;
     private Tween tw;
+    private bool isEdit=false;
 
     protected override void OpenWndEvent()
     {
@@ -36,5 +38,25 @@ public class PanelContractInformation : WindowRoot
     protected override void CloseWndEvent()
     {
 
+    }
+
+    public void ClickOpenNoteBox()
+    {
+        if (!imgNodeBox.activeSelf)
+        {
+            SetActive(imgNodeBox);
+        }
+    }
+    public void ClickNoteBoxSure()
+    {
+        SetActive(imgNodeBox, false);
+    }
+    public void ClickEdit()
+    {
+        isEdit = !isEdit;
+        foreach (GameObject light in lightImagelst)
+        {
+            SetActive(light, isEdit);
+        }
     }
 }

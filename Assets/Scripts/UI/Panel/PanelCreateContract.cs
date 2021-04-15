@@ -11,7 +11,7 @@ using UnityEngine;
 public class PanelCreateContract : WindowRoot 
 {
     public Transform imgBgCreateComtractTrans;
-
+    public GameObject imgNodeBox;
     private Tween tw;
 
     protected override void OpenWndEvent()
@@ -35,5 +35,17 @@ public class PanelCreateContract : WindowRoot
     protected override void CloseWndEvent()
     {
 
+    }
+
+    public void ClickOpenNoteBox()
+    {
+        if (!imgNodeBox.activeSelf)
+        {
+            SetActive(imgNodeBox);
+        }
+    }
+    public void ClickNoteBoxSure()
+    {
+        SetActive(imgNodeBox, false);
     }
 }

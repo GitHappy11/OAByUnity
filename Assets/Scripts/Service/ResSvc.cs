@@ -41,7 +41,7 @@ public class ResSvc : SystemRoot
 
     //游戏对象缓存字典
     private Dictionary<string, GameObject> goDict = new Dictionary<string, GameObject>();
-    public GameObject LoadPrefab(string path, bool cache = false)
+    public GameObject LoadPrefab(string path, bool cache = false,bool isInstantiate=true)
     {
         GameObject prefab;
         //这里已经读取了
@@ -54,10 +54,16 @@ public class ResSvc : SystemRoot
             }
         }
         GameObject go = null;
-        if (prefab != null)
+
+        if (prefab != null&& isInstantiate)
         {
             go = Instantiate(prefab);
         }
+        else if (prefab != null && !isInstantiate)
+        {
+            go = prefab;
+        }
+       
 
         return go;
     }
@@ -77,7 +83,7 @@ public class ResSvc : SystemRoot
                 _tw = DoTweenRoot.TransformMoveByTw(trans, 0.5f, trans.localPosition, new Vector2(trans.localPosition.x + 395, trans.localPosition.y));
                 break;
             case DoTweenType.InfoBoxAni:
-                _tw = DoTweenRoot.TransformMoveByTw(trans, 1f, new Vector2(-1390, -146), new Vector2(-160, -146));
+                _tw = DoTweenRoot.TransformMoveByTw(trans, 1f, new Vector2(-1390, 0), new Vector2(-160, 0));
                 break;
             case DoTweenType.TransRotate:
                 _tw = DoTweenRoot.TransformRotaByTw(trans, 1f, new Vector3(0, 0, 0), new Vector3(0, 0, 180));

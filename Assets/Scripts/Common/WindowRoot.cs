@@ -88,8 +88,8 @@ public class WindowRoot : MonoBehaviour
     private void ClearWnd()
     {
         SetWndState(this, false);
-        resSvc = null;
-        audioSvc = null;
+        //resSvc = null;
+        //audioSvc = null;
     }
 
 

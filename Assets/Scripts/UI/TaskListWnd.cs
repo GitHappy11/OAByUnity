@@ -5,6 +5,7 @@
 	功能：任务列表界面
 *****************************************************/
 
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,9 +20,15 @@ public class TaskListWnd : WindowRoot
     
     public Transform scrollTransByTrustDetailData;
     public Transform scrollTransByElementData;
+    public Transform btnPluging;
+    public Transform infoBoxTrans;
+
+
 
     private List<TrustDetailData> trustDetailDatasLst;
     private List<ElementData> elementDatasLst;
+    private Tween infoBoxTw;
+    private Tween btnPlugingTw;
 
     private void RefreshUI()
     {
@@ -98,6 +105,8 @@ public class TaskListWnd : WindowRoot
     protected override void OpenWndEvent()
     {
         base.OpenWndEvent();
+        infoBoxTw = resSvc.LoadTween(DoTweenType.InfoBoxAni, infoBoxTrans);
+        btnPlugingTw = resSvc.LoadTween(DoTweenType.TransRotate, btnPluging);
         RefreshUI();
     }
 
@@ -116,7 +125,25 @@ public class TaskListWnd : WindowRoot
         panelCreatTask.ReqOpenWnd();
     }
 
-    
+    public void ClickInfoBoxAni()
+    {
+        InfoBoxAni();
+    }
+
+    public void InfoBoxAni()
+    {
+
+        if (btnPluging.transform.eulerAngles.z == 0)
+        {
+            infoBoxTw.PlayForward();
+            btnPlugingTw.PlayForward();
+        }
+        else
+        {
+            infoBoxTw.PlayBackwards();
+            btnPlugingTw.PlayBackwards();
+        }
+    }
 
 
     #region 预制体生成后的信息注入点击

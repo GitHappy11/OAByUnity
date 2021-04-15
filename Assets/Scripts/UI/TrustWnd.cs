@@ -18,6 +18,8 @@ public class TrustWnd:WindowRoot
     public PanelSubClickSelect panelSubClickSelect;
     public PanelSubClickSelect2 panelSubClickSelect2;
     public Transform infoBoxTrans;
+    
+
 
 
 
@@ -26,9 +28,15 @@ public class TrustWnd:WindowRoot
     public Transform btnPluging;
 
     private List<TrustData> TrustDataLst;
+    
 
     private Tween infoBoxTw;
     private Tween btnPlugingTw;
+
+    
+
+
+    
 
     private void RefreshUI()
     {
@@ -97,14 +105,7 @@ public class TrustWnd:WindowRoot
         panelCreateTrust.ReqOpenWnd();
     }
 
-    public void ClickStaticContractBtn()
-    {
-        panelSubClickSelect.ReqOpenWnd();
-    }
-    public void ClickAddBtn()
-    {
-        panelSubClickSelect2.ReqOpenWnd();
-    }
+    
 
 
 
@@ -129,12 +130,7 @@ public class TrustWnd:WindowRoot
     }
 
 
-    public void ClickOrder()
-    {
-        //TODO
-        var buttonSelf = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-        //Text text = buttonSelf.Find("Text").GetComponent<Text>();
-    }
+    
 
 
     #region 预制体生成后的信息注入点击
