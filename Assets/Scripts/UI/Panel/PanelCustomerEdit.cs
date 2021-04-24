@@ -10,14 +10,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class PanelCustomerEdit : WindowRoot 
+public class PanelCustomerEdit : WindowRoot
 {
     public List<GameObject> iptLst;
     public List<Button> btnLst;
-    public List<Tween> twLst=new List<Tween>();
+    public List<Tween> twLst = new List<Tween>();
+    public Image[] lightImagelst;
 
     public CustomerData customerData;
+
     private bool isReg = false;
+    private bool isEdit = false;
     private int nowTw;
     private Tween tw;
 
@@ -26,29 +29,28 @@ public class PanelCustomerEdit : WindowRoot
     {
         base.ReqOpenWnd();
         RegBtn();
-        
+
         tw = resSvc.LoadTween(DoTweenType.PanelNoraml, transform);
         tw.PlayForward();
     }
 
     private void RegBtn()
     {
-        if (isReg==false)
+        if (isReg == false)
         {
-            for (int i = 0; i < btnLst.Count ; i++)
+            for (int i = 0; i < btnLst.Count; i++)
             {
                 RegIptAni(iptLst[i].transform);
-
-
                 int index = i;
                 btnLst[i].onClick.AddListener(() =>
                 {
                     ClickIptBtn(index);
                 });
-            
             }
             isReg = true;
         }
+
+
     }
 
     private void RegIptAni(Transform trans)
@@ -57,18 +59,20 @@ public class PanelCustomerEdit : WindowRoot
         tw.Pause();
         twLst.Add(tw);
     }
-    private void ClickIptBtn(int i)
+    public void ClickIptBtn(int i)
     {
-        
-        twLst[i].PlayForward();
-        if (nowTw != i)
+        if (isEdit)
         {
-            if (twLst[nowTw] != null)
+            twLst[i].PlayForward();
+            if (nowTw != i)
             {
-                twLst[nowTw].PlayBackwards();
+                if (twLst[nowTw] != null)
+                {
+                    twLst[nowTw].PlayBackwards();
+                }
             }
+            nowTw = i;
         }
-        nowTw = i;
     }
     public override void ReqCloseWnd()
     {
@@ -86,8 +90,36 @@ public class PanelCustomerEdit : WindowRoot
 
     protected override void CloseWndEvent()
     {
-        
+
     }
 
-  
+    public void ClickEdit()
+    {
+        isEdit = !isEdit;
+        if (isEdit)
+        {
+            foreach (Image light in lightImagelst)
+            {
+                light.color = new Color(255, 255, 255);
+            }
+        }
+        else
+        {
+            foreach (Image light in lightImagelst)
+            {
+                light.color = new Color(0, 0, 0);
+            }
+            foreach (Tween tw in twLst)
+            {
+                tw.PlayBackwards();
+            }
+            tw.OnRewind(() =>
+            {
+                base.ReqCloseWnd();
+            });
+        }
+    }
+
 }
+
+

@@ -25,6 +25,7 @@ public class MainSys : SystemRoot
     public OverTaskWnd overTaskWnd;
     public SearchWnd searchWnd;
     public MainWnd mainWnd;
+    public TaskBoxWnd taskBoxWnd;
 
 
     public void EnterWTD(List<CustomerData> customerDataLst)
@@ -42,10 +43,16 @@ public class MainSys : SystemRoot
         trustWnd.ReqOpenWnd(trustDataLst);
     }
 
+    public void EnterTastBox()
+    {
+        taskBoxWnd.ReqOpenWnd();
+    }
+
     public void EnterJA()
     {
         OARoot.Instance.AddTips("此功能暂未开放。");
     }
+
     public void EnterSearch()
     {
         OARoot.Instance.AddTips("此功能暂未开放。");

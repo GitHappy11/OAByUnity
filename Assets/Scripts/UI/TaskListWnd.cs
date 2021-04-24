@@ -23,12 +23,17 @@ public class TaskListWnd : WindowRoot
     public Transform btnPluging;
     public Transform infoBoxTrans;
 
+    public Transform btnNewTrans;
+    public Transform btnFinishTrans;
+
 
 
     private List<TrustDetailData> trustDetailDatasLst;
     private List<ElementData> elementDatasLst;
     private Tween infoBoxTw;
     private Tween btnPlugingTw;
+
+    private bool isShowNew=true;
 
     private void RefreshUI()
     {
@@ -90,7 +95,7 @@ public class TaskListWnd : WindowRoot
             });
 
 
-
+            RefreshBtnUI();
         }
     }
 
@@ -128,6 +133,32 @@ public class TaskListWnd : WindowRoot
     public void ClickInfoBoxAni()
     {
         InfoBoxAni();
+    }
+
+    public void ClickIsShowNew()
+    {
+        isShowNew = true;
+        RefreshBtnUI();
+    }
+
+    public void ClickIsShowFinish()
+    {
+        isShowNew = false;
+        RefreshBtnUI();
+    }
+
+    private void RefreshBtnUI()
+    {
+        if (isShowNew)
+        {
+            btnNewTrans.localScale = new Vector3(-1, 1, 1);
+            btnFinishTrans.localScale = new Vector3(-0.7f, 1, 1);
+        }
+        else
+        {
+            btnNewTrans.localScale = new Vector3(-0.7f, 1, 1);
+            btnFinishTrans.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     public void InfoBoxAni()

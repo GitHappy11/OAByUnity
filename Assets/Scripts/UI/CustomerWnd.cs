@@ -5,6 +5,7 @@
 	功能：Nothing
 *****************************************************/
 
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,8 +17,13 @@ public class CustomerWnd : WindowRoot
 
 
     public Transform scrollTransBybtnCustomer;
-  
+    public Transform infoBoxTrans;
+    public Transform btnPluging;
+
     private List<CustomerData> customerDataLst;
+    private Tween infoBoxTw;
+    private Tween btnPlugingTw;
+
 
     private void RefreshUI()
     {
@@ -63,6 +69,10 @@ public class CustomerWnd : WindowRoot
     protected override void OpenWndEvent()
     {
         base.OpenWndEvent();
+        infoBoxTw = resSvc.LoadTween(DoTweenType.InfoBoxAni, infoBoxTrans);
+        btnPlugingTw = resSvc.LoadTween(DoTweenType.TransRotate, btnPluging);
+
+        InfoBoxAni();
         RefreshUI();
     }
 
@@ -82,7 +92,20 @@ public class CustomerWnd : WindowRoot
     }
 
 
+    public void InfoBoxAni()
+    {
 
+        if (btnPluging.transform.eulerAngles.z == 0)
+        {
+            infoBoxTw.PlayForward();
+            btnPlugingTw.PlayForward();
+        }
+        else
+        {
+            infoBoxTw.PlayBackwards();
+            btnPlugingTw.PlayBackwards();
+        }
+    }
 
     #region 预制体生成后的信息注入点击
 

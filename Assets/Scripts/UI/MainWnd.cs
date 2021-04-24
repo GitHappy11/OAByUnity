@@ -62,6 +62,11 @@ public class MainWnd : WindowRoot
         OARoot.Instance.loadingWnd.ReqOpenWnd();
     }
 
+    public void ClickTaskBox()
+    {
+        MainSys.Instance.EnterTastBox();
+    }
+
 
 
     public override void RefreshAni()

@@ -12,7 +12,10 @@ using UnityEngine;
 public class PanelCreateTask : WindowRoot
 {
     public Transform imgBgCreateTaskTrans;
+    public GameObject goSearchPanel;
+    public GameObject goSearchPanel2;
 
+    public InputField iptName;
     private Tween tw;
 
     protected override void OpenWndEvent()
@@ -38,5 +41,23 @@ public class PanelCreateTask : WindowRoot
         
     }
 
- 
+    public void ClickSetSearchPanel()
+    {
+        SetActive(goSearchPanel, !goSearchPanel.activeSelf);
+    }
+    public void ClickSetSearchPanel2()
+    {
+        SetActive(goSearchPanel2, !goSearchPanel2.activeSelf);
+    }
+
+    public void ClickIptName()
+    {
+        //获取点击的按钮
+        var btnLst = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        ////得到子物体Text
+        Text txt = btnLst.GetComponentInChildren<Text>();
+        iptName.text = txt.text;
+    }
+
+
 }
